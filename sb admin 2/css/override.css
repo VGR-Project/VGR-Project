@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #wrapper {
   flex-direction: column;
 }
@@ -20,7 +21,7 @@
 }
 
 .sidebar .nav-item .nav-link {
-  padding: 20px 0 0;
+  padding: 20px 0 0 0;
 }
 
 .sidebar .nav-item .collapse, .sidebar .nav-item .collapsing {
@@ -28,6 +29,10 @@
   top: 10vh;
   margin: 0;
   left: -10px;
+}
+
+.bg-login-image{
+  background-image: url(../img/loginIMG.png);
 }
 
 @media (min-width: 768px) {
