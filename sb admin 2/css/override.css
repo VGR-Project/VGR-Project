@@ -16,11 +16,11 @@
 }
 
 .sidebar .sidebar-brand {
-  padding: 0;
+  padding: 0 10px 0 10px;
 }
 
 .sidebar .nav-item .nav-link {
-  padding: 20px 0 0 0;
+  padding: 20px 10px 0 0;
 }
 
 .sidebar .nav-item .collapse, .sidebar .nav-item .collapsing {
@@ -41,7 +41,7 @@
 
   .sidebar .nav-item .nav-link {
     width: 10rem;
-    padding: 20px 0 0;
+    padding: 20px 10px 0 0;
   }
 
   .sidebar .nav-item .collapse {
