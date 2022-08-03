@@ -1,0 +1,46 @@
+#wrapper {
+  flex-direction: column;
+}
+
+.sidebar {
+  width: 100%;
+  min-height: fit-content;
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-item {
+  height: fit-content;
+}
+
+.sidebar .sidebar-brand {
+  padding: 0;
+}
+
+.sidebar .nav-item .nav-link {
+  padding: 20px 0 0;
+}
+
+.sidebar .nav-item .collapse, .sidebar .nav-item .collapsing {
+  position: absolute;
+  top: 10vh;
+  margin: 0;
+  left: -10px;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    width: 100%!important;
+  }
+
+  .sidebar .nav-item .nav-link {
+    width: 10rem;
+    padding: 20px 0 0;
+  }
+
+  .sidebar .nav-item .collapse {
+    position: absolute;
+  }
+}
