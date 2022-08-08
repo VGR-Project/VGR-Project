@@ -16,13 +16,18 @@
 
 .sidebar .sidebar-brand {
   padding: 0 10px 0 10px;
-  width: 20%;
+  width: 22.5%;
+}
+
+.sidebar .sidebar-brand .sidebar-brand-text {
+  margin: 0!important;
 }
 
 .navbar-container {
-  width: 55%;
+  width: 50%;
   display: flex;
   gap: 20px;
+  margin-left: 2.5%;
 }
 
 .nav-item {
