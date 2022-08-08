@@ -2,13 +2,16 @@
   flex-direction: column;
 }
 
+.navbar-template {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
 .sidebar {
   width: 100%;
   min-height: fit-content;
   flex-direction: row;
-  position: sticky;
-  top: 0;
-  z-index: 10;
 }
 
 .nav-item {
