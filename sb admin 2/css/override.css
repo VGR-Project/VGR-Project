@@ -5,7 +5,7 @@
 .navbar-template {
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 2000;
 }
 
 .sidebar {
@@ -14,16 +14,28 @@
   flex-direction: row;
 }
 
+.sidebar .sidebar-brand {
+  padding: 0 10px 0 10px;
+  width: 22.5%;
+}
+
+.sidebar .sidebar-brand .sidebar-brand-text {
+  margin: 0!important;
+}
+
+.navbar-container {
+  width: 50%;
+  display: flex;
+  gap: 20px;
+  margin-left: 2.5%;
+}
+
 .nav-item {
   height: fit-content;
 }
 
-.sidebar .sidebar-brand {
-  padding: 0 10px 0 10px;
-}
-
 .sidebar .nav-item .nav-link {
-  padding: 20px 10px 0 0;
+  padding: 20px 0 0 0;
 }
 
 .sidebar .nav-item .collapse, .sidebar .nav-item .collapsing {
@@ -31,6 +43,19 @@
   top: 10vh;
   margin: 0;
   left: -10px;
+}
+
+.profile-container.ml-auto.navbar-nav {
+  width: 25%;
+  padding: 0 10px;
+  margin-left: 0!important;
+  flex-direction: row;
+  justify-content: right;
+  gap: 10px;
+}
+
+.container-fluid {
+  padding-top: 1.5rem;
 }
 
 .bg-login-image{
@@ -43,8 +68,8 @@
   }
 
   .sidebar .nav-item .nav-link {
-    width: 10rem;
-    padding: 20px 10px 0 0;
+    width: fit-content;
+    padding: 20px 0 0 0;
   }
 
   .sidebar .nav-item .collapse {
