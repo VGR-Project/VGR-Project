@@ -53,20 +53,29 @@
                             href="../../../phpmyadmin">Database Structure</a>.</p>
 
                     <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                    <?php
+                    require_once "php/db_connect.php";
+                    $sqlQueryTable = "SELECT * FROM gameLists";
+                    $showDataQuery = $connectDatabase->query($sqlQueryTable);
+
+                    if(!$showDataQuery){
+                    die("error found" . mysqli_error($connect_db));
+                    }
+                    echo "
+                    <div class='card shadow mb-4'>
+                        <div class='card-header py-3'>
+                            <h6 class='m-0 font-weight-bold text-primary'>DataTables Example</h6>
                         </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <div class='card-body'>
+                            <div class='table-responsive'>
+                                <table class='table table-bordered' id='dataTable' width='100%' cellspacing='0'>
                                     <thead>
                                         <tr>
                                             <th>Game title</th>
-                                            <th>Game Publisher</th>
+                                            <th>Game Directors</th>
                                             <th>Game Release</th>
                                             <th>Game Desc</th>
-                                            <th>Game Category</th>
+                                            <th>Game Genres</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -78,19 +87,29 @@
                                             <th>Game Category</th>
                                         </tr>
                                     </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>Genshin Impact</td>
-                                            <td>Hoyoverse</td>
-                                            <td>28/09/2020</td>
-                                            <td>This is an adventure game that can be explored by yourself or with friends</td>
-                                            <td>Adventure</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                    ";
+
+                    while($row = mysqli_fetch_array($showDataQuery)){
+                    echo "
+                        <tbody>
+                            <tr>
+                                <td>".$row["title"]."</td>
+                                <td>".$row["directors"]."</td>
+                                <td>".$row["release-date"]."</td>
+                                <td>".$row["description"]."</td>
+                                <td>".$row["genres"]."</td>
+                            </tr>
+                        </tbody>
+                    ";
+                    }
+
+                    echo "
+                            </table>
                             </div>
                         </div>
                     </div>
+                    ";
+                ?>
 
                 </div>
                 <!-- /.container-fluid -->
