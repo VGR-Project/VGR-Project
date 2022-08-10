@@ -38,29 +38,57 @@
         <!-- End of Sidebar -->
 
         <!-- Profile -->
-        <div class="col-xl-3 col-md-6 mb-4">
-            <div class="card border-left-primary shadow h-100 py-2">
-                <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                        <div class="col mr-2">
-                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                User Profile</div>
-                            <div class="h2 mb-0 font-weight-bold text-gray-800">Profile</div>
+        <?php
+                    require_once "php/db_connect.php";
+                    $sqlQueryTable = "SELECT * FROM users";
+                    $showDataQuery = $connectDatabase->query($sqlQueryTable);
+
+                    if(!$showDataQuery){
+                    die("error found" . mysqli_error($connect_db));
+                    }
+                    echo "
+                    <div class='card shadow mb-4'>
+                        <div class='card-header py-3'>
+                            <h6 class='m-0 font-weight-bold text-primary'>DataTables Example</h6>
                         </div>
-                        <div class="col-auto">
-                            <i class="fas fa-user fa-2x text-gray-300"></i>
+                        <div class='card-body'>
+                            <div class='table-responsive table-striped table-hover '>
+                                <table class='table table-bordered' id='dataTable' width='100%' cellspacing='0'>
+                                    <thead class= 'table-dark'>
+                                        <tr>
+                                            <th>Username</th>
+                                            <th>Email</th>
+                                            <th>Password</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                        <th>Username</th>
+                                        <th>Email</th>
+                                        <th>Password</th>
+                                        </tr>
+                                    </tfoot>
+                    ";
+
+                    while($row = mysqli_fetch_array($showDataQuery)){
+                    echo "
+                        
+                            <tr>
+                                <td>".$row["Username"]."</td>
+                                <td>".$row["email"]."</td>
+                                <td>".$row["Password"]."</td>
+
+                            </tr>
+                    ";
+                    }
+
+                    echo "
+                            </table>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-
-
-
-
-
-
-
+                    ";
+                ?>
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
