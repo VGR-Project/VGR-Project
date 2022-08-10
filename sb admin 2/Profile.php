@@ -38,48 +38,57 @@
         <!-- End of Sidebar -->
 
         <!-- Profile -->
+        <?php
+                    require_once "php/db_connect.php";
+                    $sqlQueryTable = "SELECT * FROM users";
+                    $showDataQuery = $connectDatabase->query($sqlQueryTable);
 
-            <table class="table table-bordered">
-                <thead  class="table-dark">
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Username</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Password</th>
-                  </tr>
-                </thead>
-                <tbody class="table-group-divider">
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
-                    <td>marklelo89@gmail.com</td>
-                    <td>Imark96</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>bocajacob@gmail.com</td>
-                    <td>jobJacob</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Larry the Bird</td>
-                    <td>labirdxtream@gmail.com</td>
-                    <td>birdythelarry</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">4</th>
-                    <td>Billy F Butcher</td>
-                    <td>fhomelander@gmail.com</td>
-                    <td>Lheroes</td>
-                  </tr>
-                    <th scope="row">5</th>
-                    <td>Edi Komar</td>
-                    <td>pantiedi@gmail.com</td>
-                    <td>gurarara</td>
-                  </tr>
-                </tbody>
-              </table>
+                    if(!$showDataQuery){
+                    die("error found" . mysqli_error($connect_db));
+                    }
+                    echo "
+                    <div class='card shadow mb-4'>
+                        <div class='card-header py-3'>
+                            <h6 class='m-0 font-weight-bold text-primary'>DataTables Example</h6>
+                        </div>
+                        <div class='card-body'>
+                            <div class='table-responsive table-striped table-hover '>
+                                <table class='table table-bordered' id='dataTable' width='100%' cellspacing='0'>
+                                    <thead class= 'table-dark'>
+                                        <tr>
+                                            <th>Username</th>
+                                            <th>Email</th>
+                                            <th>Password</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                        <th>Username</th>
+                                        <th>Email</th>
+                                        <th>Password</th>
+                                        </tr>
+                                    </tfoot>
+                    ";
+
+                    while($row = mysqli_fetch_array($showDataQuery)){
+                    echo "
+                        
+                            <tr>
+                                <td>".$row["Username"]."</td>
+                                <td>".$row["email"]."</td>
+                                <td>".$row["Password"]."</td>
+
+                            </tr>
+                    ";
+                    }
+
+                    echo "
+                            </table>
+                            </div>
+                        </div>
+                    </div>
+                    ";
+                ?>
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">

@@ -48,6 +48,11 @@ class Navbar extends HTMLElement {
                 <i class="fas fa-fw fa-table"></i>
                 <span>Game List</span></a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link" href="Profile.php">
+                <i class="fas fa-fw fa-table"></i>
+                <span>User List</span></a>
+        </li>
       </div>
 
       <!-- Topbar Navbar -->
@@ -233,11 +238,11 @@ class Navbar extends HTMLElement {
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                   aria-labelledby="userDropdown">
-                  <a class="dropdown-item" href="Profile.html">
+                  <a class="dropdown-item" href="editprofile.html">
                       <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                       Profile
                   </a>
-                  <a class="dropdown-item" href="editprofile.html">
+                  <a class="dropdown-item" href="setting.html">
                       <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                       Settings
                   </a>
