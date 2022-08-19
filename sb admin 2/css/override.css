@@ -131,6 +131,23 @@
   min-height: fit-content!important;
 }
 
+.carousel-control {
+  opacity: 0;
+  width: 10%;
+}
+
+.carousel-control:hover {
+  background-color: grey;
+}
+
+.carousel-control-prev {
+  border-radius: 0 100% 100% 0;
+}
+
+.carousel-control-next {
+  border-radius: 100% 0 0 100%;
+}
+
 @media (min-width: 768px) {
   .sidebar {
     width: 100%!important;
