@@ -108,6 +108,7 @@
 
 .aside .game-image {
   width: 88px;
+  height: fit-content;
 }
 
 .game-card-list {

@@ -7,7 +7,7 @@ class Navbar extends HTMLElement {
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
           <div class="sidebar-brand-icon rotate-n-15">
-            <img src="img/game-controller.png" alt="game-controller-logo" width="100">
+            <img src="<?=BASE_URL;?>/public/img/game-controller.png" alt="game-controller-logo" width="100">
           </div>
           <div class="sidebar-brand-text mx-3">Video Game Review</div>
       </a>
@@ -175,7 +175,7 @@ class Navbar extends HTMLElement {
                   </h6>
                   <a class="dropdown-item d-flex align-items-center" href="#">
                       <div class="dropdown-list-image mr-3">
-                          <img class="rounded-circle" src="img/undraw_profile_1.svg"
+                          <img class="rounded-circle" src="<?=BASE_URL;?>/public/img/undraw_profile_1.svg"
                               alt="...">
                           <div class="status-indicator bg-success"></div>
                       </div>
@@ -187,7 +187,7 @@ class Navbar extends HTMLElement {
                   </a>
                   <a class="dropdown-item d-flex align-items-center" href="#">
                       <div class="dropdown-list-image mr-3">
-                          <img class="rounded-circle" src="img/undraw_profile_2.svg"
+                          <img class="rounded-circle" src="<?=BASE_URL;?>/public/img/undraw_profile_2.svg"
                               alt="...">
                           <div class="status-indicator"></div>
                       </div>
@@ -199,7 +199,7 @@ class Navbar extends HTMLElement {
                   </a>
                   <a class="dropdown-item d-flex align-items-center" href="#">
                       <div class="dropdown-list-image mr-3">
-                          <img class="rounded-circle" src="img/undraw_profile_3.svg"
+                          <img class="rounded-circle" src="<?=BASE_URL;?>/public/img/undraw_profile_3.svg"
                               alt="...">
                           <div class="status-indicator bg-warning"></div>
                       </div>
@@ -233,7 +233,7 @@ class Navbar extends HTMLElement {
                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <span class="mr-2 d-none d-lg-inline small">Douglas McGee</span>
                   <img class="img-profile rounded-circle"
-                      src="img/undraw_profile.svg">
+                      src="<?=BASE_URL;?>/public/img/undraw_profile.svg">
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
