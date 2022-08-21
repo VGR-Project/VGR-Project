@@ -27,6 +27,17 @@
 </head>
 
 <body id="page-top">
+    <?php
+    
+    require_once "php/db_connect.php";
+    $sqlQueryTable = "SELECT * FROM gameLists";
+    $showDataQuery = $connectDatabase->query($sqlQueryTable);
+
+    if(!$showDataQuery){
+    die("error found" . mysqli_error($connect_db));
+    }
+    
+    ?>
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -92,15 +103,23 @@
                                 <!-- Card Body -->
                                 <div class="card-body aside">
                                     <div class="list-game overflow-auto scrollbar-none">
-                                        <div class="card bg-danger text-white shadow">
-                                            <div class="card-body">
-                                                <img src="img/game-image/omori_cover.jpg" alt="" class="game-image">
-                                                <div>
-                                                    <h6 class="m-0 font-weight-bold">Omori</h6>
-                                                    <div class="text-white-50 small">Masterpiece</div>
+                                        <?php
+                                        while($row = mysqli_fetch_array($showDataQuery)){
+                                            echo "
+                                                <div class='card bg-danger text-white shadow'>
+                                                    <div class='card-body'>
+                                                        <img src='img/game-image/omori_cover.jpg' alt='' class='game-image'>
+                                                        <div>
+                                                            <h4 class='m-0 font-weight-bold'>".$row["title"]."</h4>
+                                                            <h5>".$row["directors"]."</h5>
+                                                            <h6>".$row['imdb-rating']."</h6>
+                                                            <div class='text-white-50 small'>".$row["genres"]."</div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
+                                            ";
+                                        }
+                                        ?>
                                         <div class="card bg-danger text-white shadow">
                                             <div class="card-body">
                                                 <img src="img/game-image/omori_cover.jpg" alt="" class="game-image">
