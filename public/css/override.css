@@ -34,6 +34,14 @@
   margin-left: 2.5%;
 }
 
+.bg-gradient-darkblue{
+  background-color: #293462;
+  background-image:
+    linear-gradient(180deg,#293462 10%,#293462 100%);
+  background-size: cover;
+  
+}
+
 .nav-item {
   height: fit-content;
 }
