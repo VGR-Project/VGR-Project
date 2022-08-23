@@ -40,7 +40,7 @@
 
   <!-- Nav Item - Tables -->
   <li class="nav-item">
-      <a class="nav-link" href="game-lists.php">
+      <a class="nav-link" href="<?= BASE_URL?>/gamelists">
           <i class="fas fa-fw fa-table"></i>
           <span>Game List</span></a>
   </li>
@@ -227,7 +227,7 @@
     <li class="nav-item dropdown no-arrow">
         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="mr-2 d-none d-lg-inline small">Douglas McGee</span>
+            <span class="mr-2 d-none d-lg-inline small">User User</span>
             <img class="img-profile rounded-circle"
                 src="<?=BASE_URL;?>/public/img/undraw_profile.svg">
         </a>
