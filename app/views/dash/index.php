@@ -73,7 +73,7 @@
                                     <div class="list-game overflow-auto scrollbar-none">
                                         <?php
                                         foreach($data["new"] as $new) :?>
-                                                <div class="card bg-danger text-white shadow">
+                                                <div class="card bg-danger text-white shadow cursor-pointer game-box" id="<?=$new["id"]?>">
                                                     <div class="card-body">
                                                         <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="game-image">
                                                         <div>
@@ -107,99 +107,51 @@
                                           <div class="carousel slide" id="recomended" data-interval="false">
                                             <div class="carousel-inner" role="listbox">
                                               <div class="carousel-item carousel-item-next carousel-item-left">
-                                                <div class="d-flex flex-row justify-content-between w-100 container-item">
-                                                    <div class="card-body bg-danger col-md-3">
-                                                        <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100">
+                                                <div class="d-flex flex-row w-100 container-item">
+                                                <?php
+                                                foreach($data["rec1"] as $rec) :?>
+                                                    <div class="card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$rec["id"]?>">
+                                                        <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100 mb-3">
                                                         <div>
-                                                            <h6 class="m-0 font-weight-bold">Omori</h6>
-                                                            <div class="text-white-50 small">Masterpiece</div>
+                                                            <h4 class="m-0 font-weight-bold"><?=$rec["title"]?></h4>
+                                                            <h5><?=$rec["directors"]?></h5>
+                                                            <h6><?=$rec["imdb-rating"]?></h6>
+                                                            <div class="text-white-50 small"><?=$rec["genres"]?></div>
                                                         </div>
                                                     </div>
-                                                    <div class="card-body bg-danger col-md-3">
-                                                        <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100">
-                                                        <div>
-                                                            <h6 class="m-0 font-weight-bold">Omori</h6>
-                                                            <div class="text-white-50 small">Masterpiece</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-body bg-danger col-md-3">
-                                                        <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100">
-                                                        <div>
-                                                            <h6 class="m-0 font-weight-bold">Omori</h6>
-                                                            <div class="text-white-50 small">Masterpiece</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-body bg-danger col-md-3">
-                                                        <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100">
-                                                        <div>
-                                                            <h6 class="m-0 font-weight-bold">Omori</h6>
-                                                            <div class="text-white-50 small">Masterpiece</div>
-                                                        </div>
-                                                    </div>
+                                                <?php endforeach; ?>
                                                 </div>
                                               </div>
                                               <div class="carousel-item">
-                                                <div class="d-flex flex-row justify-content-between w-100 container-item">
-                                                    <div class="card-body bg-danger col-md-3">
-                                                        <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100">
+                                                <div class="d-flex flex-row w-100 container-item">
+                                                <?php
+                                                foreach($data["rec2"] as $rec) :?>
+                                                    <div class="card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$rec["id"]?>">
+                                                        <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100 mb-3">
                                                         <div>
-                                                            <h6 class="m-0 font-weight-bold">Omori</h6>
-                                                            <div class="text-white-50 small">Masterpiece</div>
+                                                            <h4 class="m-0 font-weight-bold"><?=$rec["title"]?></h4>
+                                                            <h5><?=$rec["directors"]?></h5>
+                                                            <h6><?=$rec["imdb-rating"]?></h6>
+                                                            <div class="text-white-50 small"><?=$rec["genres"]?></div>
                                                         </div>
                                                     </div>
-                                                    <div class="card-body bg-danger col-md-3">
-                                                        <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100">
-                                                        <div>
-                                                            <h6 class="m-0 font-weight-bold">Omori</h6>
-                                                            <div class="text-white-50 small">Masterpiece</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-body bg-danger col-md-3">
-                                                        <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100">
-                                                        <div>
-                                                            <h6 class="m-0 font-weight-bold">Omori</h6>
-                                                            <div class="text-white-50 small">Masterpiece</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-body bg-danger col-md-3">
-                                                        <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100">
-                                                        <div>
-                                                            <h6 class="m-0 font-weight-bold">Omori</h6>
-                                                            <div class="text-white-50 small">Masterpiece</div>
-                                                        </div>
-                                                    </div>
+                                                <?php endforeach; ?>
                                                 </div>
                                               </div>
                                               <div class="carousel-item active carousel-item-left">
-                                                <div class="d-flex flex-row justify-content-between w-100 container-item">
-                                                    <div class="card-body bg-danger col-md-3">
-                                                        <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100">
+                                                <div class="d-flex flex-row w-100 container-item">
+                                                <?php
+                                                foreach($data["rec3"] as $rec) :?>
+                                                    <div class="card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$rec["id"]?>">
+                                                        <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100 mb-3">
                                                         <div>
-                                                            <h6 class="m-0 font-weight-bold">Omori</h6>
-                                                            <div class="text-white-50 small">Masterpiece</div>
+                                                            <h4 class="m-0 font-weight-bold"><?=$rec["title"]?></h4>
+                                                            <h5><?=$rec["directors"]?></h5>
+                                                            <h6><?=$rec["imdb-rating"]?></h6>
+                                                            <div class="text-white-50 small"><?=$rec["genres"]?></div>
                                                         </div>
                                                     </div>
-                                                    <div class="card-body bg-danger col-md-3">
-                                                        <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100">
-                                                        <div>
-                                                            <h6 class="m-0 font-weight-bold">Omori</h6>
-                                                            <div class="text-white-50 small">Masterpiece</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-body bg-danger col-md-3">
-                                                        <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100">
-                                                        <div>
-                                                            <h6 class="m-0 font-weight-bold">Omori</h6>
-                                                            <div class="text-white-50 small">Masterpiece</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="card-body bg-danger col-md-3">
-                                                        <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100">
-                                                        <div>
-                                                            <h6 class="m-0 font-weight-bold">Omori</h6>
-                                                            <div class="text-white-50 small">Masterpiece</div>
-                                                        </div>
-                                                    </div>
+                                                <?php endforeach; ?>
                                                 </div>
                                               </div>
                                             </div>
