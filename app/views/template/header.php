@@ -20,6 +20,6 @@
 
     <!-- Custom styles for this template-->
     <link href="<?=BASE_URL;?>/public/css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="<?=BASE_URL;?>/public/css/override.css">
+    <link rel="stylesheet" href="<?=BASE_URL;?>/css/override.css">
 
 </head>
