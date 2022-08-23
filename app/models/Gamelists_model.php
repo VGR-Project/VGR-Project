@@ -20,6 +20,13 @@ class Gamelists_model
       return $this->db->resultAll();
     }
 
+    public function getRecommended($limit) {
+      $this->db->query("SELECT * FROM {$this->table} ORDER BY `imdb-rating` DESC LIMIT :mit, :set");
+      $this->db->bind("mit", $limit);
+      $this->db->bind("set", 4);
+      return $this->db->resultAll();
+    }
+
     public function getGameById($id) {
       $this->db->query("SELECT * FROM {$this->table} WHERE id = :id");
       $this->db->bind("id", $id);

@@ -149,6 +149,7 @@
 
 .container-item {
   gap: 1rem;
+  padding: 0 0.5rem;
 }
 
 .carousel-item {
