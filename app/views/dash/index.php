@@ -107,7 +107,7 @@
                                           <div class="carousel slide" id="recomended" data-interval="false">
                                             <div class="carousel-inner" role="listbox">
                                               <div class="carousel-item carousel-item-next carousel-item-left">
-                                                <div class="d-flex flex-row justify-content-between w-100 container-item">
+                                                <div class="d-flex flex-row w-100 container-item">
                                                 <?php
                                                 foreach($data["rec1"] as $rec) :?>
                                                     <div class="card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$rec["id"]?>">
@@ -123,7 +123,7 @@
                                                 </div>
                                               </div>
                                               <div class="carousel-item">
-                                                <div class="d-flex flex-row justify-content-between w-100 container-item">
+                                                <div class="d-flex flex-row w-100 container-item">
                                                 <?php
                                                 foreach($data["rec2"] as $rec) :?>
                                                     <div class="card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$rec["id"]?>">
@@ -139,7 +139,7 @@
                                                 </div>
                                               </div>
                                               <div class="carousel-item active carousel-item-left">
-                                                <div class="d-flex flex-row justify-content-between w-100 container-item">
+                                                <div class="d-flex flex-row w-100 container-item">
                                                 <?php
                                                 foreach($data["rec3"] as $rec) :?>
                                                     <div class="card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$rec["id"]?>">
