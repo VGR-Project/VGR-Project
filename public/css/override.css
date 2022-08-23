@@ -58,6 +58,10 @@
   padding-top: 1.5rem;
 }
 
+.header .carousel-item {
+  height: 100%;
+}
+
 .carousel-item {
   height: fit-content;
   min-height: 350px;
@@ -66,6 +70,21 @@
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+.carousel-item .header-desc {
+  position: absolute;
+  bottom: 0%;
+  left: 5%;
+  height: 40%;
+  width: 90%;
+}
+
+.carousel-item .cover-in-header{
+  height: 100%;
+  width: fit-content;
+  border: 5px solid;
+  margin-right: 1rem;
 }
 
 .bg-login-image{

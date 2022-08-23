@@ -23,20 +23,27 @@
                         <div class="col-xl-8 col-lg-7 h-100">
                             <div class="card shadow h-100">
                                 <!-- Card Body -->
-                                <div class="card-body">
-                                    <div class="example-wrap m-lg-0">
-                                        <div class="example">
-                                          <div class="carousel slide" id="game-header" data-ride="carousel">
-                                            <div class="carousel-inner" role="listbox">
-                                              <div class="carousel-item carousel-item-next carousel-item-left">
+                                <div class="card-body header">
+                                    <div class="m-lg-0 h-100">
+                                        <div class="h-100">
+                                          <div class="carousel slide h-100" id="game-header" data-ride="carousel">
+                                            <div class="carousel-inner h-100" role="listbox">
+                                            <?php
+                                            $i = 1;
+                                            foreach($data["new"] as $new) :?>
+                                                <div class="carousel-item <?php if($i===1) {echo "active"; $i++;} ?>">
                                                 <img class="w-100" src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="...">
+                                                <div class="text-black header-desc d-flex flex-row align-items-end">
+                                                    <img class="cover-in-header border-danger" src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="">
+                                                    <div class="header-desc-container">
+                                                        <h4 class="m-0 font-weight-bold"><?=$new["title"]?></h4>
+                                                        <h5><?=$new["directors"]?></h5>
+                                                        <h6><?=$new["imdb-rating"]?></h6>
+                                                        <div class="text-black-50 small"><?=$new["genres"]?></div>
+                                                    </div>
+                                                </div>
                                               </div>
-                                              <div class="carousel-item">
-                                                <img class="w-100" src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="...">
-                                              </div>
-                                              <div class="carousel-item active carousel-item-left">
-                                                <img class="w-100" src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="...">
-                                              </div>
+                                            <?php endforeach; ?>
                                             </div>
                                             <a class="carousel-control-prev carousel-control" href="#game-header" role="button" data-slide="prev">
                                               <span class="carousel-control-prev-icon wb-chevron-left" aria-hidden="true"></span>
@@ -95,8 +102,8 @@
                                     <h6 class="m-0 font-weight-bold text-primary">Recomended</h6>
                                 </div>
                                 <div class="card-body">
-                                    <div class="example-wrap m-lg-0">
-                                        <div class="example">
+                                    <div class="m-lg-0">
+                                        <div>
                                           <div class="carousel slide" id="recomended" data-interval="false">
                                             <div class="carousel-inner" role="listbox">
                                               <div class="carousel-item carousel-item-next carousel-item-left">
@@ -223,8 +230,8 @@
                                     <h6 class="m-0 font-weight-bold text-primary">information</h6>
                                 </div>
                                 <div class="card-body">
-                                    <div class="example-wrap m-lg-0">
-                                        <div class="example">
+                                    <div class="m-lg-0">
+                                        <div>
                                           <div class="carousel slide" id="information" data-interval="false">
                                             <div class="carousel-inner" role="listbox">
                                               <div class="carousel-item carousel-item-next carousel-item-left">
