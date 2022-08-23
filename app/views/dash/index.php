@@ -33,7 +33,7 @@
                                             foreach($data["new"] as $new) :?>
                                                 <div class="carousel-item <?php if($i===1) {echo "active"; $i++;} ?>">
                                                 <img class="w-100" src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="...">
-                                                <div class="text-black header-desc d-flex flex-row align-items-end">
+                                                <div class="text-black header-desc d-flex flex-row align-items-end cursor-pointer game-box" id="<?=$new["id"]?>">
                                                     <img class="cover-in-header border-danger" src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="">
                                                     <div class="header-desc-container">
                                                         <h4 class="m-0 font-weight-bold"><?=$new["title"]?></h4>

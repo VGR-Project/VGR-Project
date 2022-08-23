@@ -2,6 +2,10 @@
   flex-direction: column;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 .navbar-template {
   position: sticky;
   top: 0;

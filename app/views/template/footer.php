@@ -14,5 +14,8 @@
     <!-- Page level custom scripts -->
     <script src="<?=BASE_URL;?>/public/js/demo/chart-area-demo.js"></script>
     <script src="<?=BASE_URL;?>/public/js/demo/chart-pie-demo.js"></script>
+
+
+    <script src="<?=BASE_URL;?>/public/js/game-box.js"></script>
 </body>
 </html>
