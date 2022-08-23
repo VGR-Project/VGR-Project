@@ -1,6 +1,6 @@
 <?php
 
-define('BASE_URL', 'http://localhost:800/VGR%20Project');
+define('BASE_URL', 'http://localhost:800/vgr-project');
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
