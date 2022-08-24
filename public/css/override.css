@@ -6,64 +6,35 @@
   cursor: pointer;
 }
 
-.navbar-template {
+.navbar {
   position: sticky;
   top: 0;
   z-index: 2000;
 }
 
-.sidebar {
-  width: 100%;
-  min-height: fit-content;
-  flex-direction: row;
-}
-
-.sidebar .sidebar-brand {
-  padding: 0 10px 0 10px;
-  width: 22.5%;
-}
-
-.sidebar .sidebar-brand .sidebar-brand-text {
-  margin: 0!important;
+.sidebar-brand {
+  font-size: 1rem;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .05rem;
 }
 
 .navbar-container {
-  width: 50%;
   display: flex;
   gap: 20px;
   margin-left: 2.5%;
 }
 
+.nav-item::marker {
+  content: ''!important;
+}
+
 .bg-gradient-darkblue{
   background-color: #293462;
   background-image:
-    linear-gradient(180deg,#293462 10%,#293462 100%);
+  linear-gradient(180deg,#293462 10%,#293462 100%);
   background-size: cover;
-  
-}
-
-.nav-item {
-  height: fit-content;
-}
-
-.sidebar .nav-item .nav-link {
-  padding: 20px 0 0 0;
-}
-
-.sidebar .nav-item .collapse, .sidebar .nav-item .collapsing {
-  position: absolute;
-  top: 10vh;
-  margin: 0;
-  left: -10px;
-}
-
-.profile-container.ml-auto.navbar-nav {
-  width: 25%;
-  padding: 0 10px;
-  margin-left: 0!important;
-  flex-direction: row;
-  justify-content: right;
-  gap: 10px;
 }
 
 .container-fluid {
@@ -179,19 +150,4 @@
 
 .carousel-control-next {
   border-radius: 100% 0 0 100%;
-}
-
-@media (min-width: 768px) {
-  .sidebar {
-    width: 100%!important;
-  }
-
-  .sidebar .nav-item .nav-link {
-    width: fit-content;
-    padding: 20px 0 0 0;
-  }
-
-  .sidebar .nav-item .collapse {
-    position: absolute;
-  }
 }
