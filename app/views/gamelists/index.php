@@ -14,7 +14,7 @@
             <div id="content">
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid">
+                <div class="container-fluid col-lg-8">
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Game Lists</h1>
@@ -30,7 +30,7 @@
                             <div class='table-responsive'>
                                 <table class='table table-bordered' id='dataTable' width='100%' cellspacing='0'>
                                     <thead>
-                                        <tr>
+                                        <tr class="text-center">
                                             <th>Game title</th>
                                             <th>Game Directors</th>
                                             <th>Game Release</th>
@@ -39,7 +39,7 @@
                                         </tr>
                                     </thead>
                                     <tfoot>
-                                        <tr>
+                                        <tr class="text-center">
                                             <th>Game Title</th>
                                             <th>Game Publisher</th>
                                             <th>Game Release</th>
