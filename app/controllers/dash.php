@@ -2,6 +2,12 @@
 
 class Dash extends Controller {
   public function index() {
+    session_start();
+    if(!isset($_SESSION["user"])) {
+      $data['name'] = "Guest";
+    } else {
+      $data['name'] = $_SESSION['user']['username'];
+    }
     $data["title"] = "Dashboard";
     $data["new"] = $this->model("Gamelists_model")->getNew();
     $data["rec1"] = $this->model("Gamelists_model")->getRecommended(0);

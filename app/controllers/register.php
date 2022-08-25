@@ -9,7 +9,7 @@ class Register extends Controller {
         $this->view('template/footer', $data);
     }
 
-    public function regis() {
+    public function config() {
         $data = [
             'username' => $_POST['username'],
             'email' => $_POST['email'],
@@ -33,7 +33,12 @@ class Register extends Controller {
                 header("location: ".BASE_URL."/register");
             } else {
                 $this->model("Users_models")->add($data);
-                // session
+                $row = $this->model("Users_models")->getDataByEmail($data);
+                session_start();
+                $_SESSION["user"] = [
+                    'username' => $row['Username'],
+                    'email' => $row['email'],
+                ];
                 unset($_POST);
                 header("location: ".BASE_URL);
             }

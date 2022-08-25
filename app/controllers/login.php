@@ -48,7 +48,12 @@ class Login extends Controller {
             // isiin alert, lewat param
         } else {
             if($this->model("Users_models")->checkDataByEmail($data) > 0) {
-                // session
+                $row = $this->model("Users_models")->getDataByEmail($data);
+                session_start();
+                $_SESSION["user"] = [
+                    'username' => $row['Username'],
+                    'email' => $row['email'],
+                ];
                 unset($_POST);
                 header("location: ".BASE_URL);
             } else {

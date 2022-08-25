@@ -23,4 +23,10 @@ class Users_models
         $this->db->bind('email', $data['email']);
         return $this->db->rowCount();
     }
+
+    public function getDataByEmail($data) {
+        $this->db->query("SELECT * FROM {$this->table} WHERE email = :email");
+        $this->db->bind('email', $data['email']);
+        return $this->db->result();
+    }
 }

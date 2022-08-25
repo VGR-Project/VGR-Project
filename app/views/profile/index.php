@@ -4,7 +4,7 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <?php $this->view("template/navbar");?>
+        <?php $this->view("template/navbar", $data);?>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
