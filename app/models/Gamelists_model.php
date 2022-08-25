@@ -30,7 +30,7 @@ class Gamelists_model
     public function getGameById($id) {
       $this->db->query("SELECT * FROM {$this->table} WHERE id = :id");
       $this->db->bind("id", $id);
-      return $this->db->resultAll();
+      return $this->db->result();
     }
 
     public function getTitleById($id) {

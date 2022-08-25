@@ -151,3 +151,11 @@
 .carousel-control-next {
   border-radius: 100% 0 0 100%;
 }
+
+.game-desc {
+  border-left: 2px solid;
+}
+
+.game-desc .title {
+  border-bottom: 2px solid;
+}

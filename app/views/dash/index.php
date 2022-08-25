@@ -104,14 +104,14 @@
                                 <div class="card-body">
                                     <div class="m-lg-0">
                                         <div>
-                                          <div class="carousel slide" id="recomended" data-interval="false">
+                                          <div class="carousel slide game-" id="recomended" data-interval="false">
                                             <div class="carousel-inner" role="listbox">
                                               <div class="carousel-item carousel-item-next carousel-item-left">
                                                 <div class="d-flex flex-row w-100 container-item">
                                                 <?php
                                                 foreach($data["rec1"] as $rec) :?>
                                                     <div class="card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$rec["id"]?>">
-                                                        <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100 mb-3">
+                                                        <img src="<?=BASE_URL;?>/public/img/game-image/<?=trim($rec["title"], ":")?>.jpg" alt="" class="w-100 mb-3">
                                                         <div>
                                                             <h4 class="m-0 font-weight-bold"><?=$rec["title"]?></h4>
                                                             <h5><?=$rec["directors"]?></h5>

@@ -16,16 +16,33 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid col-lg-8">
 
-                    <!-- Page Heading -->
-                    <div class="card-body bg-danger col-md-3">
-                    <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100">
-                        <div class="text-white header-desc-container">
-                            <h4 class="m-0 font-weight-bold"><?=$data["game"]["0"]["title"]?></h4>
-                            <h5><?=$data["game"]["0"]["directors"]?></h5>
-                            <h6><?=$data["game"]["0"]["imdb-rating"]?></h6>
-                            <div class="text-white-50 small"><?=$data["game"]["0"]["genres"]?></div>
+                    <div class="card col-md-12 mb-4">
+                        <div class="card-body d-flex">
+                            <div class="card-body col-md-3">
+                            <img src="<?=BASE_URL;?>/public/img/game-image/<?=trim($data["game"]["title"], ":");?>.jpg" alt="" class="w-100 mb-4">
+                                <div class="text-black header-desc-container">
+                                    <h4 class="m-0 font-weight-bold mb-2"><?=$data["game"]["title"]?></h4>
+                                    <h5 class="m-0">Directors :</h5>
+                                    <h5 class="mb-2"><?=$data["game"]["directors"]?></h5>
+                                    <h6>Rating : <?=$data["game"]["imdb-rating"]?></h6>
+                                    <div class="text-white-50 small"><?=$data["game"]["genres"]?></div>
+                                </div>
+                            </div>
+                            <div class="card-body col-md-9 ml-4 game-desc border-black text-black">
+                                <h4 class="m-0 font-weight-bold pb-4 border-black title"><?=$data["game"]["title"]?></h4>
+                                <div class="mt-4">
+                                <?php foreach(explode(",", $data["game"]["genres"]) as $genre) { ?>
+                                    <a href="<?=BASE_URL;?>/<?=$genre;?>" class="btn btn-primary"><?=$genre;?></a>
+                                <?php } ?>
+                                </div>
+                                
+                                <p class="mt-4"><?=$data["game"]["description"]?></p>
+                            </div>
                         </div>
                     </div>
+
+                    <!-- Page Heading -->
+                    
                 </div>
                 <!-- /.container-fluid -->
 
