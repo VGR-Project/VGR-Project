@@ -19,7 +19,7 @@
                     <div class="card col-md-12 mb-4">
                         <div class="card-body d-flex">
                             <div class="card-body col-md-3">
-                            <img src="<?=BASE_URL;?>/public/img/game-image/<?=trim($data["game"]["title"], ":");?>.jpg" alt="" class="w-100 mb-4">
+                            <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $data['game']["title"]);?>.jpg" alt="" class="w-100 mb-4">
                                 <div class="text-black header-desc-container">
                                     <h4 class="m-0 font-weight-bold mb-2"><?=$data["game"]["title"]?></h4>
                                     <h5 class="m-0">Directors :</h5>

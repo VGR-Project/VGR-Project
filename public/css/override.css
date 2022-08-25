@@ -2,6 +2,10 @@
   flex-direction: column;
 }
 
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -97,10 +101,6 @@
   height: 100%;
 }
 
-.scrollbar-none::-webkit-scrollbar {
-  display: none;
-}
-
 .aside .card-body {
   padding: 1rem;
   display: flex;
@@ -129,6 +129,12 @@
 .container-item {
   gap: 1rem;
   padding: 0 0.5rem;
+}
+
+.card-game-img, .card-game-desc {
+  height: 250px;
+  min-height: 250px;
+  max-height: 250px;
 }
 
 .carousel-item {

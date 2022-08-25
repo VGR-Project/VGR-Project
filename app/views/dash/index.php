@@ -111,8 +111,10 @@
                                                 <?php
                                                 foreach($data["rec1"] as $rec) :?>
                                                     <div class="card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$rec["id"]?>">
-                                                        <img src="<?=BASE_URL;?>/public/img/game-image/<?=trim($rec["title"], ":")?>.jpg" alt="" class="w-100 mb-3">
-                                                        <div>
+                                                        <div class="card-game-img pb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
+                                                            <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $rec["title"])?>.jpg" alt="" class="w-100">
+                                                        </div>
+                                                        <div class="card-game-desc overflow-auto scrollbar-none">
                                                             <h4 class="m-0 font-weight-bold"><?=$rec["title"]?></h4>
                                                             <h5><?=$rec["directors"]?></h5>
                                                             <h6><?=$rec["imdb-rating"]?></h6>
@@ -127,8 +129,10 @@
                                                 <?php
                                                 foreach($data["rec2"] as $rec) :?>
                                                     <div class="card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$rec["id"]?>">
-                                                        <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100 mb-3">
-                                                        <div>
+                                                        <div class="card-game-img pb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
+                                                            <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $rec["title"])?>.jpg" alt="" class="w-100">
+                                                        </div>
+                                                        <div class="card-game-desc overflow-auto scrollbar-none">
                                                             <h4 class="m-0 font-weight-bold"><?=$rec["title"]?></h4>
                                                             <h5><?=$rec["directors"]?></h5>
                                                             <h6><?=$rec["imdb-rating"]?></h6>
@@ -143,8 +147,10 @@
                                                 <?php
                                                 foreach($data["rec3"] as $rec) :?>
                                                     <div class="card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$rec["id"]?>">
-                                                        <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100 mb-3">
-                                                        <div>
+                                                        <div class="card-game-img pb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
+                                                            <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $rec["title"])?>.jpg" alt="" class="w-100">
+                                                        </div>
+                                                        <div class="card-game-desc overflow-auto scrollbar-none">
                                                             <h4 class="m-0 font-weight-bold"><?=$rec["title"]?></h4>
                                                             <h5><?=$rec["directors"]?></h5>
                                                             <h6><?=$rec["imdb-rating"]?></h6>
