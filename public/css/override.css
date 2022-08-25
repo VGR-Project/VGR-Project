@@ -75,48 +75,13 @@
   height: 500px;
 }
 
-.header > div {
-  height: 100%;
-}
-
 .header > div > .card {
   height: 100%;
-}
-
-.header-game {
-  width: 100%;
-}
-
-.aside .list-game {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  height: 100%;
-}
-
-.aside .card-body {
-  padding: 1rem;
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
 }
 
 .aside .game-image {
   width: 88px;
   height: fit-content;
-}
-
-.game-card-list {
-  width: 100%;
-  display: flex;
-  gap: 1rem;
-}
-
-.game-card-list .card-body {
-  width: fit-content;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
 }
 
 .container-item {
