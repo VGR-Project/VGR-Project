@@ -33,11 +33,12 @@
                                             foreach($data["new"] as $new) :?>
                                                 <div class="carousel-item <?php if($i===1) {echo "active"; $i++;} ?>">
                                                 <div class="game-box w-100 cursor-pointer" id="<?=$new["id"]?>">
+                                                <!-- !!! -->
                                                     <img class="w-100" src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="...">
                                                 </div>
                                                 <div class="text-black position-absolute bottom-0 h-50 card-body m-auto d-flex col-md-12 flex-row align-items-end cursor-pointer game-box" id="<?=$new["id"]?>">
                                                     <div class="w-25 h-100 d-flex justify-content-center align-items-center overflow-hidden border border-danger border-5">
-                                                        <img class="w-100" src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="">
+                                                        <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $new["title"])?>.jpg" alt="" class="w-100">
                                                     </div>
                                                     <div class="w-75 pl-3 overflow-auto scrollbar-none">
                                                         <h4 class="m-0 font-weight-bold"><?=$new["title"]?></h4>
@@ -80,7 +81,7 @@
                                                 <div class="card bg-danger h-50 text-white shadow cursor-pointer game-box mb-3" id="<?=$new["id"]?>">
                                                     <div class="card-body w-100 d-flex">
                                                         <div class="w-50 pr-3 h-100 overflow-hidden d-flex justify-content-center align-items-center">
-                                                            <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100">
+                                                            <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $new["title"])?>.jpg" alt="" class="w-100">
                                                         </div>
                                                         <div class="w-50 h-100 overflow-auto scrollbar-none">
                                                             <h4 class="m-0 font-weight-bold"><?=$new["title"]?></h4>
@@ -267,7 +268,7 @@
                                                 <div class="card bg-danger h-50 text-white shadow cursor-pointer game-box mb-3" id="<?=$new["id"]?>">
                                                     <div class="card-body w-100 d-flex">
                                                         <div class="w-50 pr-3 h-100 overflow-hidden d-flex justify-content-center align-items-center">
-                                                            <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100">
+                                                            <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $new["title"])?>.jpg" alt="" class="w-100">
                                                         </div>
                                                         <div class="w-50 h-100 overflow-auto scrollbar-none">
                                                             <h4 class="m-0 font-weight-bold"><?=$new["title"]?></h4>
@@ -299,7 +300,7 @@
                                                 <div class="card bg-danger h-50 text-white shadow cursor-pointer game-box mb-3" id="<?=$new["id"]?>">
                                                     <div class="card-body w-100 d-flex">
                                                         <div class="w-50 pr-3 h-100 overflow-hidden d-flex justify-content-center align-items-center">
-                                                            <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100">
+                                                            <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $new["title"])?>.jpg" alt="" class="w-100">
                                                         </div>
                                                         <div class="w-50 h-100 overflow-auto scrollbar-none">
                                                             <h4 class="m-0 font-weight-bold"><?=$new["title"]?></h4>
@@ -331,7 +332,7 @@
                                                 <div class="card bg-danger h-50 text-white shadow cursor-pointer game-box mb-3" id="<?=$new["id"]?>">
                                                     <div class="card-body w-100 d-flex">
                                                         <div class="w-50 pr-3 h-100 overflow-hidden d-flex justify-content-center align-items-center">
-                                                            <img src="<?=BASE_URL;?>/public/img/game-image/omori_cover.jpg" alt="" class="w-100">
+                                                            <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $new["title"])?>.jpg" alt="" class="w-100">
                                                         </div>
                                                         <div class="w-50 h-100 overflow-auto scrollbar-none">
                                                             <h4 class="m-0 font-weight-bold"><?=$new["title"]?></h4>
