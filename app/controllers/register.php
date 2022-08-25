@@ -3,6 +3,8 @@
 class Register extends Controller {
     public function index()
     {
+        session_start();
+        session_destroy();
         $data['title'] = 'Register';
         $this->view('template/header', $data);
         $this->view('register/index', $data);

@@ -2,6 +2,12 @@
 
 class profile extends Controller{
     public function index(){
+        session_start();
+        if(!isset($_SESSION["user"])) {
+        $data['name'] = "Guest";
+        } else {
+        $data['name'] = $_SESSION['user']['username'];
+        }
         $data["title"] = "Edit Profile";
         $data["fav1"] = $this->model("Gamelists_model")->getRecommended(0);
         $data["fav2"] = $this->model("Gamelists_model")->getRecommended(4);

@@ -2,38 +2,12 @@
 class Login extends Controller {
     public function index()
     {
+        session_start();
+        session_destroy();
         $data['title'] = 'Login';
         $this->view('template/header', $data);
         $this->view('login/index', $data);
         $this->view('template/footer', $data);
-    }
-
-    public function sign()
-    {
-        $userData = [
-            'username' => $_POST['username'],
-            'password' => $_POST['password'],
-        ];
-
-        $user = $this->model('Users_model')->getUserByUnameNPass($userData);
-
-        if($user > 0)
-        {
-            $_SESSION['user'] = [
-                'Username' => $user['Username'],
-                'Email' => $user['Email'],
-                'Password' => $user['Password'],
-                
-            ];
-        }
-        else 
-        {
-            header('Location: ' . BASE_URL . '/login');
-            exit;
-        }
-
-        header('Location: ' . BASE_URL);
-        exit;
     }
 
     public function config() {
