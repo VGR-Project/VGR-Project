@@ -44,4 +44,13 @@ class Gamelists_model
       // Idk why this wont to convert pdo bind...
       return $this->db->resultAll();
     }
+
+    public function search($search) {
+      $this->db->query("SELECT * FROM {$this->table} 
+      WHERE genres LIKE '%{$search["search"]}%' OR
+      title LIKE '%{$search["search"]}%' OR
+      directors LIKE '%{$search["search"]}%'
+      ORDER BY title");
+      return $this->db->resultAll();
+    }
 }

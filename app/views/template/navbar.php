@@ -13,7 +13,7 @@
 
     <div class="navbar-container">
     <!-- Nav Item - Tables -->
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link" href="<?=BASE_URL;?>/gamelists">
             <i class="fas fa-fw fa-table"></i>
             <span>Game List</span>
@@ -24,6 +24,12 @@
             <i class="fas fa-fw fa-table"></i>
             <span>User List</span>
         </a>
+    </li> -->
+    <li class="nav-item">
+        <form class="nav-link" action="<?=BASE_URL;?>/dash/search" method="post">
+            <button type="submit" class="mr-3">Search</button>
+            <input type="text" name="search" class="w-100">
+        </form>
     </li>
     </div>
 
@@ -61,6 +67,17 @@
                 </form>
             </div>
         </li>
+
+        <?php if($data['name'] === "Guest") { ?>
+        <li class="nav-item dropdown no-arrow">
+            <a class="nav-link dropdown-toggle" href="<?=BASE_URL;?>/login">
+                <span class="mr-2 d-none d-lg-inline text-white small">
+                    <?= $data['name'];?>
+                </span>
+                <img class="img-profile rounded-circle" src="<?=BASE_URL;?>/public/img/undraw_profile.svg">
+            </a>
+        </li>
+        <?php } else { ?>
 
         <!-- Nav Item - Alerts -->
         <li class="nav-item dropdown no-arrow mx-1">
@@ -175,21 +192,12 @@
 
         <!-- Nav Item - User Information -->
         <li class="nav-item dropdown no-arrow">
-            <?php if($data['name'] === "Guest") { ?>
-                <a class="nav-link dropdown-toggle" href="<?=BASE_URL;?>/login">
-                    <span class="mr-2 d-none d-lg-inline text-white small">
-                        <?= $data['name'];?>
-                    </span>
-                    <img class="img-profile rounded-circle" src="<?=BASE_URL;?>/public/img/undraw_profile.svg">
-                </a>
-            <?php } else { ?>
-                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                    <span class="mr-2 d-none d-lg-inline text-white small">
-                        <?= $data['name'];?>
-                    </span>
-                    <img class="img-profile rounded-circle" src="<?=BASE_URL;?>/public/img/undraw_profile.svg">
-                </a>
-            <?php } ?>
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <span class="mr-2 d-none d-lg-inline text-white small">
+                    <?= $data['name'];?>
+                </span>
+                <img class="img-profile rounded-circle" src="<?=BASE_URL;?>/public/img/undraw_profile.svg">
+            </a>
             <!-- Dropdown - User Information -->
             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                 <a class="dropdown-item" href="<?=BASE_URL;?>/profile">
@@ -211,5 +219,6 @@
                 </a>
             </div>
         </li>
+        <?php } ?>
     </ul>
 </nav>

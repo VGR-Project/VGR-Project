@@ -21,20 +21,20 @@
 
                         <div class="card col-md-12">
                             <div class="card-body">
-                                <h4 class="m-0 font-weight-bold pb-4 border-black title">Genre - <?=$data["title"]?></h4>
+                                <h4 class="m-0 font-weight-bold pb-4 border-black title">Search - <?=$_POST["search"]?></h4>
                             </div>
                             <div class="card-body d-flex flex-wrap gap-3">
-                                <?php foreach($data["genre"] as $genre) { ?>
+                                <?php foreach($data["search"] as $search) { ?>
                                     <div class="pl-2 pr-2 col-md-6 mb-3">
-                                        <div class="rounded card-game-container cursor-pointer game-box text-white card-body w-100 bg-danger d-flex" id="<?=$genre["id"]?>">
+                                        <div class="rounded card-game-container cursor-pointer game-box text-white card-body w-100 bg-danger d-flex" id="<?=$search["id"]?>">
                                             <div class="card-game-img pr-3 d-flex justify-content-center align-items-center overflow-hidden w-25">
-                                                <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $genre["title"])?>.jpg" alt="" class="w-100">
+                                                <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $search["title"])?>.jpg" alt="" class="w-100">
                                             </div>
                                             <div class="card-game-desc overflow-auto scrollbar-none w-75">
-                                                <h4 class="m-0 font-weight-bold"><?=$genre["title"]?></h4>
-                                                <h5><?=$genre["directors"]?></h5>
-                                                <h6><?=$genre["imdb-rating"]?></h6>
-                                                <div class="text-white-50 small"><?=$genre["genres"]?></div>
+                                                <h4 class="m-0 font-weight-bold"><?=$search["title"]?></h4>
+                                                <h5><?=$search["directors"]?></h5>
+                                                <h6><?=$search["imdb-rating"]?></h6>
+                                                <div class="text-white-50 small"><?=$search["genres"]?></div>
                                             </div>
                                         </div>
                                     </div>
@@ -51,13 +51,7 @@
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
-                    </div>
-                </div>
-            </footer>
+            <?php $this->view("template/copyright"); ?>
             <!-- End of Footer -->
 
         </div>
