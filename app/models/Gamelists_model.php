@@ -40,7 +40,7 @@ class Gamelists_model
     }
 
     public function getGameByGenre($genre) {
-      $this->db->query("SELECT * FROM {$this->table} WHERE genres LIKE '%{$genre}%'");
+      $this->db->query("SELECT * FROM {$this->table} WHERE genres LIKE '%{$genre}%' ORDER BY title");
       // Idk why this wont to convert pdo bind...
       return $this->db->resultAll();
     }
