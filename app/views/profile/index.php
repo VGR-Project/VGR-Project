@@ -22,8 +22,8 @@
                             <img src=".//img/profilepict.jpg" class="rounded-circle mb-3" alt="userprofile" class="img-fluid ">
                         </div>
                         <div class="text_group ml-5">
-                            <p class="h4 pb-2">Username</p>
-                            <h4 class="pb-2">emaillimaeil@gmail.com</h4>
+                            <p class="h4 pb-2"><?=$data['name'];?></p>
+                            <h4 class="pb-2"><?=$_SESSION['user']['email'];?></h4>
                             <button type="button" class="btn btn-outline-primary mb-2">Edit Profile</button>
                         </div>
                     </div>
