@@ -137,6 +137,12 @@
   max-height: 250px;
 }
 
+.card-game-container .card-game-img, .card-game-container .card-game-desc {
+  height: 150px;
+  min-height: 150px;
+  max-height: 150px;
+}
+
 .carousel-item {
   min-height: fit-content!important;
 }
@@ -162,6 +168,6 @@
   border-left: 2px solid;
 }
 
-.game-desc .title {
+.title {
   border-bottom: 2px solid;
 }
