@@ -43,7 +43,7 @@
                                                     <div class="w-75 pl-3 overflow-auto scrollbar-none">
                                                         <h4 class="m-0 font-weight-bold"><?=$new["title"]?></h4>
                                                         <h5><?=$new["directors"]?></h5>
-                                                        <h6><?=$new["imdb-rating"]?></h6>
+                                                        <h6><?=$new["rating"]?></h6>
                                                         <div class="text-black-50 small"><?=$new["genres"]?></div>
                                                     </div>
                                                 </div>
@@ -86,7 +86,7 @@
                                                         <div class="w-50 h-100 overflow-auto scrollbar-none">
                                                             <h4 class="m-0 font-weight-bold"><?=$new["title"]?></h4>
                                                             <h5><?=$new["directors"]?></h5>
-                                                            <h6><?=$new["imdb-rating"]?></h6>
+                                                            <h6><?=$new["rating"]?></h6>
                                                             <div class="text-white-50 small"><?=$new["genres"]?></div>
                                                         </div>
                                                     </div>
@@ -124,7 +124,7 @@
                                                         <div class="card-game-desc overflow-auto scrollbar-none">
                                                             <h4 class="m-0 font-weight-bold"><?=$rec["title"]?></h4>
                                                             <h5><?=$rec["directors"]?></h5>
-                                                            <h6><?=$rec["imdb-rating"]?></h6>
+                                                            <h6><?=$rec["rating"]?></h6>
                                                             <div class="text-white-50 small"><?=$rec["genres"]?></div>
                                                         </div>
                                                     </div>
@@ -142,7 +142,7 @@
                                                         <div class="card-game-desc overflow-auto scrollbar-none">
                                                             <h4 class="m-0 font-weight-bold"><?=$rec["title"]?></h4>
                                                             <h5><?=$rec["directors"]?></h5>
-                                                            <h6><?=$rec["imdb-rating"]?></h6>
+                                                            <h6><?=$rec["rating"]?></h6>
                                                             <div class="text-white-50 small"><?=$rec["genres"]?></div>
                                                         </div>
                                                     </div>
@@ -160,7 +160,7 @@
                                                         <div class="card-game-desc overflow-auto scrollbar-none">
                                                             <h4 class="m-0 font-weight-bold"><?=$rec["title"]?></h4>
                                                             <h5><?=$rec["directors"]?></h5>
-                                                            <h6><?=$rec["imdb-rating"]?></h6>
+                                                            <h6><?=$rec["rating"]?></h6>
                                                             <div class="text-white-50 small"><?=$rec["genres"]?></div>
                                                         </div>
                                                     </div>
@@ -273,7 +273,7 @@
                                                         <div class="w-50 h-100 overflow-auto scrollbar-none">
                                                             <h4 class="m-0 font-weight-bold"><?=$new["title"]?></h4>
                                                             <h5><?=$new["directors"]?></h5>
-                                                            <h6><?=$new["imdb-rating"]?></h6>
+                                                            <h6><?=$new["rating"]?></h6>
                                                             <div class="text-white-50 small"><?=$new["genres"]?></div>
                                                         </div>
                                                     </div>
@@ -305,7 +305,7 @@
                                                         <div class="w-50 h-100 overflow-auto scrollbar-none">
                                                             <h4 class="m-0 font-weight-bold"><?=$new["title"]?></h4>
                                                             <h5><?=$new["directors"]?></h5>
-                                                            <h6><?=$new["imdb-rating"]?></h6>
+                                                            <h6><?=$new["rating"]?></h6>
                                                             <div class="text-white-50 small"><?=$new["genres"]?></div>
                                                         </div>
                                                     </div>
@@ -337,7 +337,7 @@
                                                         <div class="w-50 h-100 overflow-auto scrollbar-none">
                                                             <h4 class="m-0 font-weight-bold"><?=$new["title"]?></h4>
                                                             <h5><?=$new["directors"]?></h5>
-                                                            <h6><?=$new["imdb-rating"]?></h6>
+                                                            <h6><?=$new["rating"]?></h6>
                                                             <div class="text-white-50 small"><?=$new["genres"]?></div>
                                                         </div>
                                                     </div>

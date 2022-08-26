@@ -33,7 +33,7 @@
                                             <div class="card-game-desc overflow-auto scrollbar-none w-75">
                                                 <h4 class="m-0 font-weight-bold"><?=$search["title"]?></h4>
                                                 <h5><?=$search["directors"]?></h5>
-                                                <h6><?=$search["imdb-rating"]?></h6>
+                                                <h6><?=$search["rating"]?></h6>
                                                 <div class="text-white-50 small"><?=$search["genres"]?></div>
                                             </div>
                                         </div>

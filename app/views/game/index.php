@@ -24,7 +24,7 @@
                                     <h4 class="m-0 font-weight-bold mb-2"><?=$data["game"]["title"]?></h4>
                                     <h5 class="m-0">Directors :</h5>
                                     <h5 class="mb-2"><?=$data["game"]["directors"]?></h5>
-                                    <h6>Rating : <?=$data["game"]["imdb-rating"]?></h6>
+                                    <h6>Rating : <?=$data["game"]["rating"]?></h6>
                                     <div class="text-white-50 small"><?=$data["game"]["genres"]?></div>
                                 </div>
                             </div>
