@@ -24,7 +24,6 @@
                                     <h4 class="m-0 font-weight-bold mb-2"><?=$data["game"]["title"]?></h4>
                                     <h5 class="m-0">Directors :</h5>
                                     <h5 class="mb-2"><?=$data["game"]["directors"]?></h5>
-                                    <h6>Rating : <?=$data["game"]["rating"]?></h6>
                                     <div class="text-white-50 small"><?=$data["game"]["genres"]?></div>
                                 </div>
                             </div>
@@ -35,8 +34,47 @@
                                     <a href="<?=BASE_URL;?>/dash/genre/<?=$genre;?>" class="btn btn-primary"><?=$genre;?></a>
                                 <?php } ?>
                                 </div>
-                                
-                                <p class="mt-4"><?=$data["game"]["description"]?></p>
+                                <div class="card col-sd-12 mt-3">
+                                    <div class="card-body d-flex flex-wrap justify-content-center">
+                                        <div class="w-25 text-center">
+                                            <h6 class="w-100">Rating :</h6>
+                                            <h4 class="m-0 font-weight-bold border-black w-100"><?=$data["game"]["rating"]?></h4>
+                                            <h6 class="w-100"><?=$data["CURating"]["CURating"]?> Users</h6>
+                                        </div>
+                                        <?php if($data['name'] === "Guest") {} else {?>
+                                        <div class="w-25 text-center">
+                                            <h6 class="w-100">Your Rating :</h6>
+                                            <?php if($data['RCRating']['CURating'] != 0) { ?>
+                                            <h4 class="m-0 font-weight-bold border-black w-100"><?=$data["Urating"]["rating"]?></h4>
+                                            <div class="dropdown no-arrow">
+                                                <a class="dropdown-toggle" id="rating" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Edit</a>
+                                                <!-- Dropdown - User Information -->
+                                                <div class="dropdown-menu shadow card-body" aria-labelledby="rating">
+                                                    <form action="<?=BASE_URL;?>/game/update/<?=$data['idGame'];?>" method="post">
+                                                        <label for="rating">Your Rating :</label>
+                                                        <input type="number" name="rating" id="rating" step="0.01" value="<?=$data["Urating"]["rating"]?>" min="0" max="10">
+                                                        <button type="submit" class="btn">Submit</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <?php } else { ?>
+                                            <div class="dropdown no-arrow">
+                                                <a class="btn btn-primary dropdown-toggle" id="rating" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Rating Now</a>
+                                                <!-- Dropdown - User Information -->
+                                                <div class="dropdown-menu shadow card-body" aria-labelledby="rating">
+                                                    <form action="<?=BASE_URL;?>/game/rating/<?=$data['idGame'];?>" method="post">
+                                                        <label for="rating">Your Rating :</label>
+                                                        <input type="number" name="rating" id="rating" step="0.01" min="0" max="10">
+                                                        <button type="submit" class="btn">Submit</button>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <?php } ?>
+                                        </div>
+                                        <?php } ?>
+                                    </div>
+                                </div>
+                                <p class="mt-3"><?=$data["game"]["description"]?></p>
                             </div>
                         </div>
                     </div>
