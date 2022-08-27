@@ -17,24 +17,27 @@ class Gamelists extends Controller{
 
     public function tambah(){
         if($this->model('Gamelists_model')->tambahGame($_POST) > 0){
-            Flasher::setFlash('berhasil', 'ditambahkan', 'success');
+            // Flasher::setFlash('berhasil', 'ditambahkan', 'success');
             header('Location: ' . BASE_URL . "/gamelists/index");
             exit;
         } else{
-            Flasher::setFlash('gagal', 'ditambahkan', 'danger');
+            // Flasher::setFlash('gagal', 'ditambahkan', 'danger');
             header('Location:' . BASE_URL . '/user/singleData');
         }
     }
 
-    public function deleteGame($id){
-        $query = "DELETE FROM $this->table WHERE id = :id";
-
-        $this->db->query($query);
-        $this->db->bind('id', $id);
-
-        $this->db->execute();
-        return $this->db->rowCount();
+    public function delete($id){
+        if($this->model('Gamelists_model')->deleteGame($id) > 0){
+            // Flasher::setFlash('berhasil', 'ditambahkan', 'success');
+            header('Location: ' . BASE_URL . "/gamelists/index");
+            exit;
+        } else{
+            // Flasher::setFlash('gagal', 'ditambahkan', 'danger');
+            header('Location:' . BASE_URL . '/gamelists/index');
+        }
     }
+
+    
 
     public function ubah(){
         $this->model('Gamelists_model')->ubahDataGame($_POST);

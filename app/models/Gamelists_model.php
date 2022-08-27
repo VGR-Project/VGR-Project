@@ -78,10 +78,9 @@ class Gamelists_model
     public function tambahGame($data){
       $query = "INSERT INTO 
                   $this->table 
-                  VALUES(:id, :gameTitle,  :gameDirectors, :gameRelease, :yearRelease, :gameDesc, :gameGenres)";
+                  VALUES(null, :gameDesc, :gameTitle, :yearRelease, :gameGenres, :gameRelease, :gameDirectors)";
 
       $this->db->query($query);
-      $this->db->bind('id', $data['id_game']);
       $this->db->bind('gameTitle', $data['gameTitle']);
       $this->db->bind('gameDirectors', $data['gameDirectors']);
       $this->db->bind('gameRelease', $data['gameRelease']);
@@ -113,6 +112,16 @@ class Gamelists_model
     echo "<br>";
     return $this->db->rowCount();
   }
+
+  public function deleteGame($id){
+    $query = "DELETE FROM $this->table WHERE id = :id";
+
+    $this->db->query($query);
+    $this->db->bind('id', $id);
+
+    $this->db->execute();
+    return $this->db->rowCount();
+}
 
   public function getGameById_forEdit($id){
     $this->db->query("SELECT * FROM $this->table WHERE id=:id");
