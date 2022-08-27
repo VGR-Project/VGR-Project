@@ -4,12 +4,12 @@ $(function(){
      
      $('#formModalLabel').html("Ubah Data User");
      $('.modal-footer button[type=submit]').html("Ubah Data");
-     $('.modal-body form').attr('action','http://localhost/vgr-project/public/gamelists/ubah');
+     $('.modal-body form').attr('action','/vgr-project/public/gamelists/ubah');
  
      const id = $(this).data('id');
  
      $.ajax({
-         url: 'http://localhost/vgr-project/public/gamelists/getUbah',
+         url: '/vgr-project/public/gamelists/getUbah',
          data: {id : id},
          method: 'post',
          dataType: 'json',
@@ -28,7 +28,7 @@ $(function(){
     }); 
  
     $('.tampilModalTambah').on('click', function(){
-     $('.modal-body form').attr('action','http://localhost/vgr-project/public/gamelists/tambah');
+     $('.modal-body form').attr('action','/vgr-project/public/gamelists/tambah');
      $('#formModalLabel').html("Add Game Data");
      $('.modal-footer button[type=submit]').html("Add Game");
      $('#id_game').val("");
