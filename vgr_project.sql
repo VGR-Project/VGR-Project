@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 26, 2022 at 02:33 PM
+-- Generation Time: Aug 27, 2022 at 05:49 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -29,11 +29,11 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `gamelists` (
   `id` int(11) NOT NULL,
-  `description` text NOT NULL,
+  `desc_game` text NOT NULL,
   `title` varchar(255) NOT NULL,
   `year` varchar(255) NOT NULL,
   `genres` varchar(255) NOT NULL,
-  `release-date` date NOT NULL,
+  `release` date NOT NULL,
   `directors` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -41,7 +41,7 @@ CREATE TABLE `gamelists` (
 -- Dumping data for table `gamelists`
 --
 
-INSERT INTO `gamelists` (`id`, `description`, `title`, `year`, `genres`, `release-date`, `directors`) VALUES
+INSERT INTO `gamelists` (`id`, `desc_game`, `title`, `year`, `genres`, `release`, `directors`) VALUES
 (1, 'Geralt is in the southern province of Toussaint where a monstrous serial killer is targeting knights with a dark past. Geralt and his old vampire friend investigate the killer\'s motives.', 'The Witcher 3: Wild Hunt - Blood and Wine', '2016', 'Action, Adventure, Drama, Fantasy, Horror, Mystery', '2016-05-31', 'Konrad Tomaszkiewicz'),
 (2, 'Amidst the decline of the Wild West at the turn of the 20th century, outlaw Arthur Morgan and his gang struggle to cope with the loss of their way of life.', 'Red Dead Redemption II', '2018', 'Action, Adventure, Crime, Drama, Western', '2018-10-26', 'Rockstar'),
 (3, 'A monster hunter for hire embarks on an epic journey to find his former apprentice before The Wild Hunt can capture her and bring about the destruction of the world.', 'The Witcher 3: Wild Hunt', '2015', 'Action, Adventure, Drama, Fantasy, Mystery, Romance', '2015-05-19', 'Konrad Tomaszkiewicz'),
