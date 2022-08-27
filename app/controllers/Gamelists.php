@@ -37,14 +37,16 @@ class Gamelists extends Controller{
     }
 
     public function ubah(){
-        if($this->model('Gamelists_model')->ubahDataGame($_POST) > 0){
-            Flasher::setFlash('berhasil', 'diubah', 'success');
-            header('Location: ' . BASE_URL . "/gamelists/index");
-            exit;
-        } else{
-            Flasher::setFlash('gagal', 'diubah', 'danger');
-            header('Location:' . BASE_URL . '/gamelists/index');
-        }
+        $this->model('Gamelists_model')->ubahDataGame($_POST);
+        header('Location: ' . BASE_URL . "/gamelists/index");
+        // if($this->model('Gamelists_model')->ubahDataGame($_POST) > 0){
+        //     Flasher::setFlash('berhasil', 'diubah', 'success');
+        //     header('Location: ' . BASE_URL . "/gamelists/index");
+        //     exit;
+        // } else{
+        //     Flasher::setFlash('gagal', 'diubah', 'danger');
+        //     header('Location:' . BASE_URL . '/gamelists/index');
+        // }
     }
 
     public function getUbah(){

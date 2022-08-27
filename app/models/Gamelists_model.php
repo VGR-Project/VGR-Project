@@ -88,21 +88,18 @@ class Gamelists_model
       $this->db->bind('yearRelease', $data['yearRelease']);
       $this->db->bind('gameDesc', $data['gameDesc']);
       $this->db->bind('gameGenres', $data['gameGenres']);
-
-      $this->db->execute();
       return $this->db->rowCount();
   }
 
   public function ubahDataGame($data){
-    $query = "UPDATE $this->table SET 
-                title = :gameTitle, 
-                directors = :gameDirectors, 
-                release = :gameRelease,
-                year = :yearRelease, 
-                desc_game = :gameDesc, 
-                genres = :gameGenres 
+    $query = "UPDATE {$this->table} SET 
+                `title` = :gameTitle, 
+                `directors` = :gameDirectors, 
+                `release` = :gameRelease,
+                `year` = :yearRelease, 
+                `desc_game` = :gameDesc, 
+                `genres` = :gameGenres 
                 WHERE id = :id";
-
     $this->db->query($query);
     $this->db->bind('id' , $data['id_game']);
     $this->db->bind('gameTitle', $data['gameTitle']);
@@ -114,7 +111,6 @@ class Gamelists_model
     var_dump($data);
     echo "<br>";
     echo "<br>";
-    $this->db->execute();
     return $this->db->rowCount();
   }
 
