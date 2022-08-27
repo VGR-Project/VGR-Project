@@ -20,7 +20,7 @@ class Gamelists_model
       FROM {$this->table}, rating
       WHERE {$this->table}.id = rating.id_game
       GROUP BY {$this->table}.id 
-      ORDER BY `release-date`
+      ORDER BY `release`
       LIMIT 5");
       return $this->db->resultAll();
     }
@@ -74,4 +74,53 @@ class Gamelists_model
         ORDER BY {$this->table}.title ASC");
       return $this->db->resultAll();
     }
+
+    public function tambahGame($data){
+      $query = "INSERT INTO 
+                  $this->table 
+                  VALUES(:id, :gameTitle,  :gameDirectors, :gameRelease, :yearRelease, :gameDesc, :gameGenres)";
+
+      $this->db->query($query);
+      $this->db->bind('id', $data['id_game']);
+      $this->db->bind('gameTitle', $data['gameTitle']);
+      $this->db->bind('gameDirectors', $data['gameDirectors']);
+      $this->db->bind('gameRelease', $data['gameRelease']);
+      $this->db->bind('yearRelease', $data['yearRelease']);
+      $this->db->bind('gameDesc', $data['gameDesc']);
+      $this->db->bind('gameGenres', $data['gameGenres']);
+
+      $this->db->execute();
+      return $this->db->rowCount();
+  }
+
+  public function ubahDataGame($data){
+    $query = "UPDATE $this->table SET 
+                title = :gameTitle, 
+                directors = :gameDirectors, 
+                release = :gameRelease,
+                year = :yearRelease, 
+                desc_game = :gameDesc, 
+                genres = :gameGenres 
+                WHERE id = :id";
+
+    $this->db->query($query);
+    $this->db->bind('id' , $data['id_game']);
+    $this->db->bind('gameTitle', $data['gameTitle']);
+    $this->db->bind('gameDirectors', $data['gameDirectors']);
+    $this->db->bind('gameRelease', $data['gameRelease']);
+    $this->db->bind('yearRelease', $data['yearRelease']);
+    $this->db->bind('gameDesc', $data['gameDesc']);
+    $this->db->bind('gameGenres', $data['gameGenres']);
+    var_dump($data);
+    echo "<br>";
+    echo "<br>";
+    $this->db->execute();
+    return $this->db->rowCount();
+  }
+
+  public function getGameById_forEdit($id){
+    $this->db->query("SELECT * FROM $this->table WHERE id=:id");
+    $this->db->bind('id', $id);
+    return $this->db->result();
+}
 }

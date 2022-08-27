@@ -22,6 +22,7 @@
                             href="../../../phpmyadmin">Database Structure</a>.</p>
 
                     <!-- DataTales Example -->
+                    <button class="btn btn-primary mb-3 tampilModalTambah" data-toggle="modal" data-target="#formModal">Add Game</button>
                     <div class='card shadow mb-4'>
                         <div class='card-header py-3'>
                             <h6 class='m-0 font-weight-bold text-primary'>DataTables Example</h6>
@@ -34,8 +35,12 @@
                                             <th>Game title</th>
                                             <th>Game Directors</th>
                                             <th>Game Release</th>
+                                            <th>Year Release</th>
                                             <th>Game Desc</th>
                                             <th>Game Genres</th>
+                                            <th>Detail</th>
+                                            <th>Edit</th>
+                                            <th>Delete</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -43,8 +48,12 @@
                                             <th>Game Title</th>
                                             <th>Game Publisher</th>
                                             <th>Game Release</th>
+                                            <th>Year Release</th>
                                             <th>Game Desc</th>
                                             <th>Game Category</th>
+                                            <th>Detail</th>
+                                            <th>Edit</th>
+                                            <th>Delete</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -52,9 +61,13 @@
                             <tr>
                                 <td><?=$row["title"]?></td>
                                 <td><?=$row["directors"]?></td>
-                                <td><?=$row["release-date"]?></td>
-                                <td><?=$row["description"]?></td>
+                                <td><?=$row["release"]?></td>
+                                <td><?=$row["year"]?></td>
+                                <td><?=$row["desc_game"]?></td>
                                 <td><?=$row["genres"]?></td>
+                                <td><button class="btn btn-success" onclick="window.location.href='<?= BASE_URL?>/game/<?=$row['id']?>'">Detail</button></td>
+                                <td class="tampilModalUbah" data-id="<?= $row['id'];?>"><a data-toggle="modal" data-target="#formModal"><button class="btn btn-warning">Edit</button></td>
+                                <td><button class="btn btn-danger">Delete</button></td>
                             </tr>
                             <?php endforeach;?>
                         </tbody>
@@ -104,3 +117,54 @@
             </div>
         </div>
     </div>
+
+    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true" style="margin-top:50px;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="formModalLabel">Tambah Data</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form action="<?= BASE_URL ?>/gamelists/tambah" method="POST">
+        <input type="hidden" id="id_game" name="id_game"> 
+        <div class="form-group">
+            <label for="game-title">Game Title</label>
+            <input type="text" class="form-control" id="gameTitle" name="gameTitle">
+        </div>
+
+        <div class="form-group">
+            <label for="game-directors">Game Directors</label>
+            <input type="text" class="form-control" id="gameDirectors" name="gameDirectors">
+        </div>
+
+        <div class="form-group">
+            <label for="game-release">Game Release</label>
+            <input type="date" class="form-control" id="gameRelease" name="gameRelease">
+        </div>
+
+        <div class="form-group">
+            <label for="game-release">Year Release</label>
+            <input type="text" class="form-control" id="yearRelease" name="yearRelease">
+        </div>
+        
+        <div class="form-group">
+            <label for="game-desc">Game Desc</label>
+            <textarea class="form-control" id="gameDesc" name="gameDesc" style="height: 150px;"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="game-genres">Game Genres</label>
+            <input type="text" class="form-control" id="gameGenres" name="gameGenres">
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary">Add Game</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

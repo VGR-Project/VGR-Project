@@ -19,19 +19,22 @@
             <span>Game List</span>
         </a>
     </li>
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="fas fa-fw fa-table"></i>
-            <span>User List</span>
-        </a>
-    </li> -->
+     -->
     <li class="nav-item">
         <form class="nav-link" action="<?=BASE_URL;?>/dash/search" method="post">
-            <button type="submit" class="mr-3">Search</button>
-            <input type="text" name="search" class="w-100">
+            <button type="submit" class="mr-3 btn btn-primary">Search</button>
+            <input type="text" name="search" class="w-100 rounded">
         </form>
+        
     </li>
     </div>
+
+    <li class="nav-item">
+        <a class="nav-link" href="<?= BASE_URL ?>/gamelists">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Game List</span>
+        </a>
+    </li>
 
     <!-- Topbar Search -->
     <!-- <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">

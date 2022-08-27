@@ -17,5 +17,7 @@
 
 
     <script src="<?=BASE_URL;?>/public/js/game-box.js"></script>
+    <script src="<?=BASE_URL;?>/public/js/jquery-3.6.0.min.js"></script>
+    <script src="<?=BASE_URL;?>/public/js/script.js"></script>
 </body>
 </html>

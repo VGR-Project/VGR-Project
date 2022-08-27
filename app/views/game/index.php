@@ -1,3 +1,4 @@
+
 <body id="page-top">
 
     <!-- Page Wrapper -->
@@ -36,7 +37,7 @@
                                 <?php } ?>
                                 </div>
                                 
-                                <p class="mt-4"><?=$data["game"]["description"]?></p>
+                                <p class="mt-4"><?=$data["game"]["desc_game"]?></p>
                             </div>
                         </div>
                     </div>
