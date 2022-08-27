@@ -2,8 +2,8 @@ $(function(){
 
     $('.tampilModalUbah').on('click', function(){
      
-     $('#formModalLabel').html("Ubah Data User");
-     $('.modal-footer button[type=submit]').html("Ubah Data");
+     $('#formModalLabel').html("Edit Game Datas");
+     $('.modal-footer button[type=submit]').html("Edit Datas");
      $('.modal-body form').attr('action','http://localhost/vgr-project/public/gamelists/ubah');
  
      const id = $(this).data('id');

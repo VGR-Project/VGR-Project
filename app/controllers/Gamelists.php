@@ -26,6 +26,16 @@ class Gamelists extends Controller{
         }
     }
 
+    public function deleteGame($id){
+        $query = "DELETE FROM $this->table WHERE id = :id";
+
+        $this->db->query($query);
+        $this->db->bind('id', $id);
+
+        $this->db->execute();
+        return $this->db->rowCount();
+    }
+
     public function ubah(){
         if($this->model('Gamelists_model')->ubahDataGame($_POST) > 0){
             Flasher::setFlash('berhasil', 'diubah', 'success');
