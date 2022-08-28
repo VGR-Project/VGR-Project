@@ -53,7 +53,7 @@
                                                 <a class="dropdown-toggle" id="rating" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Edit</a>
                                                 <!-- Dropdown - User Information -->
                                                 <div class="dropdown-menu shadow card-body" aria-labelledby="rating">
-                                                    <form action="<?=BASE_URL;?>/game/updatereview/<?=$data['idGame'];?>" method="post">
+                                                    <form action="<?=BASE_URL;?>/game/updaterating/<?=$data['idGame'];?>" method="post">
                                                         <label for="rating">Your Rating :</label>
                                                         <input type="number" name="rating" id="rating" step="0.01" value="<?=$data["Urating"]["rating"]?>" min="0" max="10">
                                                         <button type="submit" class="btn">Submit</button>
@@ -93,7 +93,7 @@
                                         <?php } 
                                         } else { ?>
                                             mr-auto mb-3 bg-warning text-white
-                                        <?php } ?>
+                                        <?php }} ?>
                                         ">
                                             <div class="card-body">
                                                 <div class="d-flex align-items-center review-comment pb-2">
@@ -105,8 +105,8 @@
                                                 <?php if(isset($data['name'])) { 
                                                     if($review['email_user'] === $_SESSION['user']['email']) {?>
                                                     <a href="" class="btn btn-warning mt-2">Edit</a>
-                                                    <a href="" class="btn btn-danger mt-2 ml-2">Delete</a>
-                                                <?php }} ?>
+                                                    <a href="<?=BASE_URL;?>/game/deletereview/<?=$review['id_review'];?>/<?=$data['idGame'];?>" class="btn btn-danger mt-2 ml-2">Delete</a>
+                                                <?php } ?>
                                                 </div>
                                             </div>
                                         </div>
