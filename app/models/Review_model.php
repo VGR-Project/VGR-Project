@@ -20,12 +20,18 @@ class Review_model
     }
 
     public function inputReview($id, $review, $date, $email) {
-      $this->db->query("INSERT INTO {$this->table}
+      $this->db->query("INSERT INTO {$this->table} (`id_game`, `review`, `date_review`, `email_user`)
         VALUES (:id, :rating, :date, :email)");
       $this->db->bind("id", $id);
       $this->db->bind("rating", $review);
       $this->db->bind("date", $date);
       $this->db->bind("email", $email);
+      return $this->db->rowCount();
+    }
+
+    public function deleteReview($id) {
+      $this->db->query("DELETE FROM {$this->table} WHERE id_review = :id");
+      $this->db->bind("id", $id);
       return $this->db->rowCount();
     }
 }
