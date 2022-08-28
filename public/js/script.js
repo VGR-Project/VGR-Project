@@ -3,7 +3,7 @@ $(function(){
     $('.tampilModalUbah').on('click', function(){
      $('#formModalLabel').html("Edit Game Datas");
      $('.modal-footer button[type=submit]').html("Edit Datas");
-     $('.modal-body form').attr('action','http://localhost/vgr-project/public/gamelists/ubah');
+     $('.modal-body form').attr('action','/vgr-project/public/gamelists/ubah');
  
      const id = $(this).data('id');
  
