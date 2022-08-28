@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 27, 2022 at 05:49 AM
+-- Generation Time: Aug 28, 2022 at 07:54 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -164,6 +164,27 @@ INSERT INTO `rating` (`id_game`, `rating`, `email_user`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `review`
+--
+
+CREATE TABLE `review` (
+  `id_game` int(11) NOT NULL,
+  `review` text NOT NULL,
+  `date_review` datetime NOT NULL,
+  `email_user` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `review`
+--
+
+INSERT INTO `review` (`id_game`, `review`, `date_review`, `email_user`) VALUES
+(1, 'Awsome...', '2022-08-28 15:07:48', 'Admin@gmail.com'),
+(1, 'Hi Admin, can I be admin too? hehe...', '2022-08-28 07:41:32', 'vaisyagovinandas@gmail.com');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -200,6 +221,13 @@ ALTER TABLE `rating`
   ADD KEY `email_user` (`email_user`);
 
 --
+-- Indexes for table `review`
+--
+ALTER TABLE `review`
+  ADD KEY `id_game` (`id_game`,`email_user`),
+  ADD KEY `email_user` (`email_user`);
+
+--
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -225,6 +253,13 @@ ALTER TABLE `gamelists`
 ALTER TABLE `rating`
   ADD CONSTRAINT `rating_ibfk_1` FOREIGN KEY (`id_game`) REFERENCES `gamelists` (`id`),
   ADD CONSTRAINT `rating_ibfk_2` FOREIGN KEY (`email_user`) REFERENCES `users` (`email`);
+
+--
+-- Constraints for table `review`
+--
+ALTER TABLE `review`
+  ADD CONSTRAINT `review_ibfk_1` FOREIGN KEY (`id_game`) REFERENCES `gamelists` (`id`),
+  ADD CONSTRAINT `review_ibfk_2` FOREIGN KEY (`email_user`) REFERENCES `users` (`email`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
