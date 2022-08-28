@@ -86,9 +86,12 @@
                                     <div class="card-body">
                                     <?php foreach($data['review'] as $review) {?>
                                         <div class="card w-75 
-                                        <?php if($review['email_user'] === $_SESSION['user']['email']) { ?>
-                                            ml-auto mb-3 bg-success text-white
-                                        <?php } else { ?>
+                                        <?php 
+                                        if(isset($data['name'])) {
+                                            if($review['email_user'] === $_SESSION['user']['email']) { ?>
+                                                ml-auto mb-3 bg-success text-white
+                                        <?php } 
+                                        } else { ?>
                                             mr-auto mb-3 bg-warning text-white
                                         <?php } ?>
                                         ">
@@ -99,10 +102,11 @@
                                                 </div>
                                                 <p class="mt-3 mb-0"><?=$review['review']?></p>
                                                 <div class="d-flex justify-content-end w-100">
-                                                <?php if($review['email_user'] === $_SESSION['user']['email']) { ?>
+                                                <?php if(isset($data['name'])) { 
+                                                    if($review['email_user'] === $_SESSION['user']['email']) {?>
                                                     <a href="" class="btn btn-warning mt-2">Edit</a>
                                                     <a href="" class="btn btn-danger mt-2 ml-2">Delete</a>
-                                                <?php } ?>
+                                                <?php }} ?>
                                                 </div>
                                             </div>
                                         </div>
