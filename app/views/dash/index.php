@@ -37,8 +37,8 @@
                                                     <img class="w-100" src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="...">
                                                 </div>
                                                 <div class="text-black position-absolute bottom-0 h-50 card-body m-auto d-flex col-md-12 flex-row align-items-end cursor-pointer game-box" id="<?=$new["id"]?>">
-                                                    <div class="w-25 h-100 d-flex justify-content-center align-items-center overflow-hidden border border-danger border-5">
-                                                        <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $new["title"])?>.jpg" alt="" class="w-100">
+                                                    <div class="w-25 h-100 d-flex justify-content-center align-items-center overflow-hidden">
+                                                        <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $new["title"])?>.jpg" alt="" class="w-100 border border-danger border-5">
                                                     </div>
                                                     <div class="w-75 pl-3 overflow-auto scrollbar-none">
                                                         <h4 class="m-0 font-weight-bold"><?=$new["title"]?></h4>
@@ -249,7 +249,7 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Popular Games</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Most Favorites</h6>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body aside">
@@ -281,23 +281,23 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Top Upcoming Games</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Old Games</h6>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body aside">
                                     <div class="d-flex flex-column h-100 overflow-auto scrollbar-none">
                                         <?php
-                                        foreach($data["new"] as $new) :?>
-                                                <div class="card bg-danger h-50 text-white shadow cursor-pointer game-box mb-3" id="<?=$new["id"]?>">
+                                        foreach($data["old"] as $old) :?>
+                                                <div class="card bg-danger h-50 text-white shadow cursor-pointer game-box mb-3" id="<?=$old["id"]?>">
                                                     <div class="card-body w-100 d-flex">
                                                         <div class="w-50 pr-3 h-100 overflow-hidden d-flex justify-content-center align-items-center">
-                                                            <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $new["title"])?>.jpg" alt="" class="w-100">
+                                                            <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $old["title"])?>.jpg" alt="" class="w-100">
                                                         </div>
                                                         <div class="w-50 h-100 overflow-auto scrollbar-none">
-                                                            <h4 class="m-0 font-weight-bold"><?=$new["title"]?></h4>
-                                                            <h5><?=$new["directors"]?></h5>
-                                                            <h6><?=$new["rating"]?></h6>
-                                                            <div class="text-white-50 small"><?=$new["genres"]?></div>
+                                                            <h4 class="m-0 font-weight-bold"><?=$old["title"]?></h4>
+                                                            <h5><?=$old["directors"]?></h5>
+                                                            <h6><?=$old["rating"]?></h6>
+                                                            <div class="text-white-50 small"><?=$old["genres"]?></div>
                                                         </div>
                                                     </div>
                                                 </div>

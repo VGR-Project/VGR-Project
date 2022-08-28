@@ -20,7 +20,17 @@ class Gamelists_model
       FROM {$this->table}, rating
       WHERE {$this->table}.id = rating.id_game
       GROUP BY {$this->table}.id 
-      ORDER BY `release`
+      ORDER BY `release` DESC
+      LIMIT 5");
+      return $this->db->resultAll();
+    }
+
+    public function getOld() {
+      $this->db->query("SELECT {$this->table}.*, CAST(AVG(rating.rating) AS DECIMAL(4, 2)) AS rating 
+      FROM {$this->table}, rating
+      WHERE {$this->table}.id = rating.id_game
+      GROUP BY {$this->table}.id 
+      ORDER BY `release` ASC
       LIMIT 5");
       return $this->db->resultAll();
     }
