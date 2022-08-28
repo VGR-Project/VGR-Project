@@ -45,8 +45,8 @@
                                         <div>
                                           <div class="carousel slide" id="recomended" data-interval="false">
                                             <div class="carousel-inner" role="listbox">
-                                              <div class="carousel-item carousel-item-next carousel-item-left">
-                                              <div class="d-flex flex-row w-100 container-item">
+                                              <div class="carousel-item active">
+                                                <div class="d-flex flex-row w-100 container-item">
                                                 <?php
                                                 foreach($data["fav1"] as $fav) :?>
                                                     <div class="rounded card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$fav["id"]?>">
@@ -81,7 +81,7 @@
                                                 <?php endforeach; ?>
                                                 </div>
                                               </div>
-                                              <div class="carousel-item active carousel-item-left">
+                                              <div class="carousel-item">
                                                 <div class="d-flex flex-row w-100 container-item">
                                                 <?php
                                                 foreach($data["fav3"] as $fav) :?>

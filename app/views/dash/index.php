@@ -29,7 +29,7 @@
                                           <div class="carousel slide h-100" id="game-header" data-ride="carousel">
                                             <div class="carousel-inner h-100" role="listbox">
                                             <?php
-                                            $i = 1;
+                                            $iNew = 1;
                                             foreach($data["new"] as $new) :?>
                                                 <div class="carousel-item <?php if($i===1) {echo "active"; $i++;} ?>">
                                                 <div class="game-box w-100 cursor-pointer" id="<?=$new["id"]?>">
@@ -113,7 +113,7 @@
                                         <div>
                                           <div class="carousel slide game-" id="recomended" data-interval="false">
                                             <div class="carousel-inner" role="listbox">
-                                              <div class="carousel-item carousel-item-next carousel-item-left">
+                                              <div class="carousel-item active">
                                                 <div class="d-flex flex-row w-100 container-item">
                                                 <?php
                                                 foreach($data["rec1"] as $rec) :?>
@@ -149,7 +149,7 @@
                                                 <?php endforeach; ?>
                                                 </div>
                                               </div>
-                                              <div class="carousel-item active carousel-item-left">
+                                              <div class="carousel-item">
                                                 <div class="d-flex flex-row w-100 container-item">
                                                 <?php
                                                 foreach($data["rec3"] as $rec) :?>
