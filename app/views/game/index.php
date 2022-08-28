@@ -30,6 +30,7 @@
                             </div>
                             <div class="card-body col-md-9 ml-4 game-desc border-black text-black">
                                 <h4 class="m-0 font-weight-bold pb-4 border-black title"><?=$data["game"]["title"]?></h4>
+
                                 <div class="mt-4">
                                 <?php foreach(explode(", ", $data["game"]["genres"]) as $genre) { ?>
                                     <a href="<?=BASE_URL;?>/dash/genre/<?=$genre;?>" class="btn btn-primary"><?=$genre;?></a>
@@ -52,7 +53,7 @@
                                                 <a class="dropdown-toggle" id="rating" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Edit</a>
                                                 <!-- Dropdown - User Information -->
                                                 <div class="dropdown-menu shadow card-body" aria-labelledby="rating">
-                                                    <form action="<?=BASE_URL;?>/game/update/<?=$data['idGame'];?>" method="post">
+                                                    <form action="<?=BASE_URL;?>/game/updatereview/<?=$data['idGame'];?>" method="post">
                                                         <label for="rating">Your Rating :</label>
                                                         <input type="number" name="rating" id="rating" step="0.01" value="<?=$data["Urating"]["rating"]?>" min="0" max="10">
                                                         <button type="submit" class="btn">Submit</button>
@@ -76,8 +77,49 @@
                                         <?php } ?>
                                     </div>
                                 </div>
+
                                 <p class="mt-3"><?=$data["game"]["desc_game"]?></p>
 
+                                <h3 class="mt-5 mb-0 pb-2 border-black title">Review</h3>
+                                
+                                <div class="card col-sd-12 mt-3 review">
+                                    <div class="card-body">
+                                    <?php foreach($data['review'] as $review) {?>
+                                        <div class="card w-75 
+                                        <?php if($review['email_user'] === $_SESSION['user']['email']) { ?>
+                                            ml-auto mb-3 bg-success text-white
+                                        <?php } else { ?>
+                                            mr-auto mb-3 bg-warning text-white
+                                        <?php } ?>
+                                        ">
+                                            <div class="card-body">
+                                                <div class="d-flex align-items-center review-comment pb-2">
+                                                    <img class="img-profile rounded-circle mr-3" src="<?=BASE_URL;?>/public/img/undraw_profile.svg">
+                                                    <span><?=$review['Username']?></span>
+                                                </div>
+                                                <p class="mt-3 mb-0"><?=$review['review']?></p>
+                                                <div class="d-flex justify-content-end w-100">
+                                                <?php if($review['email_user'] === $_SESSION['user']['email']) { ?>
+                                                    <a href="" class="btn btn-warning mt-2">Edit</a>
+                                                    <a href="" class="btn btn-danger mt-2 ml-2">Delete</a>
+                                                <?php } ?>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    <?php } ?>
+                                    </div>
+                                </div>
+                                <?php if(!isset($data['name'])) {} else {?>
+                                <div class="card col-sd-12 review">
+                                    <div class="card-body d-flex">
+                                        <img class="img-profile rounded-circle mr-3" src="<?=BASE_URL;?>/public/img/undraw_profile.svg">
+                                        <form action="<?=BASE_URL;?>/game/review/<?=$data['idGame'];?>" method="post" class="d-flex w-100">
+                                            <textarea name="review" rows="1" placeholder="Type here..." class="w-100"></textarea>
+                                            <button type="submit" class="w-auto ml-3">Submit</button>
+                                        </form>
+                                    </div>
+                                </div>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>

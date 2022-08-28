@@ -18,6 +18,23 @@
   left: 0;
 }
 
+.review {
+  border: 2px solid;
+}
+
+.review .card:nth-last-child(1) {
+  margin-bottom: 0!important;
+}
+
+.review-comment {
+  border-bottom: 2px solid;
+}
+
+.review .img-profile {
+  height: 2rem;
+  width: 2rem;
+}
+
 .header-image-carousel {
   height: 270px;
   max-height: 270px;

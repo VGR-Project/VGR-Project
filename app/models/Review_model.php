@@ -1,0 +1,31 @@
+<?php
+
+class Review_model
+{
+    private $table = "review";
+    private $db;
+
+    public function __construct()
+    {
+      $this->db = new Database;
+    }
+
+    public function getReviewGame($id) {
+      $this->db->query("SELECT {$this->table}.*, users.Username FROM {$this->table}, users
+      WHERE users.email = {$this->table}.email_user
+      AND id_game = :id
+      ORDER BY `date_review` DESC");
+      $this->db->bind("id", $id);
+      return $this->db->resultAll();
+    }
+
+    public function inputReview($id, $review, $date, $email) {
+      $this->db->query("INSERT INTO {$this->table}
+        VALUES (:id, :rating, :date, :email)");
+      $this->db->bind("id", $id);
+      $this->db->bind("rating", $review);
+      $this->db->bind("date", $date);
+      $this->db->bind("email", $email);
+      return $this->db->rowCount();
+    }
+}

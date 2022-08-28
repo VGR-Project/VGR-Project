@@ -11,6 +11,7 @@ class Game extends Controller {
     $data["title"] = $this->model("Gamelists_model")->getTitleById($id)["title"];
     $data["game"] = $this->model("Gamelists_model")->getGameById($id);
     $data["CURating"] = $this->model("Rating_model")->ratingCountUser($id);
+    $data["review"] = $this->model("Review_model")->getReviewGame($id);
     $data["idGame"] = $id;
     $this->view("template/header", $data);
     $this->view("game/index", $data);
@@ -25,10 +26,18 @@ class Game extends Controller {
     header("location: ".BASE_URL."/game/index/".$id);
   }
 
-  public function update($id) {
+  public function updatereview($id) {
     session_start();
     if($_POST['rating'] != "") {
       $this->model("Rating_model")->updateRating($id, $_POST['rating'], $_SESSION['user']['email']);
+    }
+    header("location: ".BASE_URL."/game/index/".$id);
+  }
+
+  public function review($id) {
+    session_start();
+    if($_POST['review'] != "") {
+      $this->model("Review_model")->inputReview($id, $_POST['review'], date("Y-m-d h:i:s"), $_SESSION['user']['email']);
     }
     header("location: ".BASE_URL."/game/index/".$id);
   }
