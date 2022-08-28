@@ -43,7 +43,7 @@
                                             <h4 class="m-0 font-weight-bold border-black w-100"><?=$data["game"]["rating"]?></h4>
                                             <h6 class="w-100"><?=$data["CURating"]["CURating"]?> Users</h6>
                                         </div>
-                                        <?php if($data['name'] === "Guest") {} else {?>
+                                        <?php if(!isset($data['name'])) {} else {?>
                                         <div class="w-25 text-center">
                                             <h6 class="w-100">Your Rating :</h6>
                                             <?php if($data['RCRating']['CURating'] != 0) { ?>

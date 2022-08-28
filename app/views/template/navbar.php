@@ -71,12 +71,9 @@
             </div>
         </li>
 
-        <?php if($data['name'] === "Guest") { ?>
+        <?php if(!isset($data['name'])) { ?>
         <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="<?=BASE_URL;?>/login">
-                <span class="mr-2 d-none d-lg-inline text-white small">
-                    <?= $data['name'];?>
-                </span>
                 <img class="img-profile rounded-circle" src="<?=BASE_URL;?>/public/img/undraw_profile.svg">
             </a>
         </li>

@@ -3,9 +3,7 @@
 class Game extends Controller {
   public function index($id) {
     session_start();
-    if(!isset($_SESSION["user"])) {
-      $data['name'] = "Guest";
-    } else {
+    if(isset($_SESSION["user"])) {
       $data['name'] = $_SESSION['user']['username'];
       $data["RCRating"] = $this->model("Rating_model")->rowUserRating($_SESSION['user']['email'], $id);
       $data["Urating"] = $this->model("Rating_model")->userRating($_SESSION['user']['email'], $id);

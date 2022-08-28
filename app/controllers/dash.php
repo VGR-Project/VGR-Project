@@ -3,9 +3,7 @@
 class Dash extends Controller {
   public function index() {
     session_start();
-    if(!isset($_SESSION["user"])) {
-      $data['name'] = "Guest";
-    } else {
+    if(isset($_SESSION["user"])) {
       $data['name'] = $_SESSION['user']['username'];
     }
     $data["title"] = "Dashboard";
@@ -21,13 +19,11 @@ class Dash extends Controller {
 
   public function search() {
     session_start();
-    if(!isset($_SESSION["user"])) {
-      $data['name'] = "Guest";
+    if(isset($_SESSION["user"])) {
+      $data['name'] = $_SESSION['user']['username'];
     } else if (!isset($_POST["search"])) {
       header("location: ".BASE_URL);
-    } else {
-      $data['name'] = $_SESSION['user']['username'];
-    }
+    } else {}
     $data["title"] = "Dashboard";
     $data["search"] = $this->model("Gamelists_model")->search($_POST);
     $this->view("template/header", $data);
@@ -37,9 +33,7 @@ class Dash extends Controller {
 
   public function genre($genre) {
     session_start();
-    if(!isset($_SESSION["user"])) {
-      $data['name'] = "Guest";
-    } else {
+    if(isset($_SESSION["user"])) {
       $data['name'] = $_SESSION['user']['username'];
     }
     $data["title"] = $genre;
