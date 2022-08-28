@@ -31,7 +31,7 @@
                                             <?php
                                             $iNew = 1;
                                             foreach($data["new"] as $new) :?>
-                                                <div class="carousel-item <?php if($i===1) {echo "active"; $i++;} ?>">
+                                                <div class="carousel-item <?php if($iNew===1) {echo "active"; $iNew++;} ?>">
                                                 <div class="game-box w-100 cursor-pointer" id="<?=$new["id"]?>">
                                                 <!-- !!! -->
                                                     <img class="w-100" src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="...">
@@ -189,47 +189,38 @@
                         <!-- Pie Chart -->
                         <div class="col-lg-12">
                             <div class="card shadow mb-4">
-                                <!-- Card Header - Dropdown -->
-                                <div
-                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">information</h6>
-                                </div>
                                 <div class="card-body">
                                     <div class="m-lg-0">
                                         <div>
                                           <div class="carousel slide" id="information" data-interval="false">
                                             <div class="carousel-inner" role="listbox">
-                                              <div class="carousel-item carousel-item-next carousel-item-left">
+                                              <div class="carousel-item active">
                                                 <div class="d-flex flex-row justify-content-between w-100 container-item">
-                                                    <div class="card-body bg-danger col-md-6">
+                                                    <div class="rounded card-body bg-danger col-md-6 header-image-carousel overflow-hidden">
                                                         <img src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="" class="w-100">
                                                     </div>
-                                                    <div class="card-body bg-danger col-md-6">
+                                                    <div class="rounded card-body bg-danger col-md-6 header-image-carousel overflow-hidden">
                                                         <img src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="" class="w-100">
                                                     </div>
                                                 </div>
                                               </div>
                                               <div class="carousel-item">
                                                 <div class="d-flex flex-row justify-content-between w-100 container-item">
-                                                    <div class="d-flex flex-row justify-content-between w-100 container-item">
-                                                        <div class="card-body bg-danger col-md-6">
-                                                            <img src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="" class="w-100">
-                                                        </div>
-                                                        <div class="card-body bg-danger col-md-6">
-                                                            <img src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="" class="w-100">
-                                                        </div>
+                                                    <div class="rounded card-body bg-danger col-md-6 header-image-carousel overflow-hidden">
+                                                        <img src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="" class="w-100">
+                                                    </div>
+                                                    <div class="rounded card-body bg-danger col-md-6 header-image-carousel overflow-hidden">
+                                                        <img src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="" class="w-100">
                                                     </div>
                                                 </div>
                                               </div>
-                                              <div class="carousel-item active carousel-item-left">
+                                              <div class="carousel-item">
                                                 <div class="d-flex flex-row justify-content-between w-100 container-item">
-                                                    <div class="d-flex flex-row justify-content-between w-100 container-item">
-                                                        <div class="card-body bg-danger col-md-6">
-                                                            <img src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="" class="w-100">
-                                                        </div>
-                                                        <div class="card-body bg-danger col-md-6">
-                                                            <img src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="" class="w-100">
-                                                        </div>
+                                                    <div class="rounded card-body bg-danger col-md-6 header-image-carousel overflow-hidden">
+                                                        <img src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="" class="w-100">
+                                                    </div>
+                                                    <div class="rounded card-body bg-danger col-md-6 header-image-carousel overflow-hidden">
+                                                        <img src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="" class="w-100">
                                                     </div>
                                                 </div>
                                               </div>

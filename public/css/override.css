@@ -18,6 +18,12 @@
   left: 0;
 }
 
+.header-image-carousel {
+  height: 270px;
+  max-height: 270px;
+  min-height: 270px;
+}
+
 .navbar {
   position: sticky;
   top: 0;
