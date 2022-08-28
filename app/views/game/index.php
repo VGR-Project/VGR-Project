@@ -24,7 +24,7 @@
                                 <div class="text-black header-desc-container">
                                     <h4 class="m-0 font-weight-bold mb-2"><?=$data["game"]["title"]?></h4>
                                     <h5 class="m-0">Directors :</h5>
-                                    <h5 class="mb-2"><?=$data["game"]["directors"]?></h5>
+                                    <p class="mb-2"><?=$data["game"]["directors"]?></p>
                                     <div class="text-white-50 small"><?=$data["game"]["genres"]?></div>
                                 </div>
                             </div>
