@@ -14,7 +14,7 @@ class Review_model
       $this->db->query("SELECT {$this->table}.*, users.Username FROM {$this->table}, users
       WHERE users.email = {$this->table}.email_user
       AND id_game = :id
-      ORDER BY `date_review` DESC");
+      ORDER BY `date_review` ASC");
       $this->db->bind("id", $id);
       return $this->db->resultAll();
     }

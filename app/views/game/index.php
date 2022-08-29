@@ -89,11 +89,12 @@
                                         <?php 
                                         if(isset($data['name'])) {
                                             if($review['email_user'] === $_SESSION['user']['email']) { ?>
-                                                ml-auto mb-3 bg-success text-white
-                                        <?php } 
-                                        } else { ?>
+                                            ml-auto mb-3 bg-success text-white
+                                        <?php } else { ?>
                                             mr-auto mb-3 bg-warning text-white
-                                        <?php }} ?>
+                                        <?php }} else { ?>
+                                            mr-auto mb-3 bg-warning text-white
+                                        <?php } ?>
                                         ">
                                             <div class="card-body">
                                                 <div class="d-flex align-items-center review-comment pb-2">
@@ -106,11 +107,11 @@
                                                     if($review['email_user'] === $_SESSION['user']['email']) {?>
                                                     <a href="" class="btn btn-warning mt-2">Edit</a>
                                                     <a href="<?=BASE_URL;?>/game/deletereview/<?=$review['id_review'];?>/<?=$data['idGame'];?>" class="btn btn-danger mt-2 ml-2">Delete</a>
-                                                <?php } ?>
+                                                <?php }} ?>
                                                 </div>
                                             </div>
                                         </div>
-                                    <?php } ?>
+                                        <?php } ?>
                                     </div>
                                 </div>
                                 <?php if(!isset($data['name'])) {} else {?>
@@ -126,10 +127,7 @@
                                 <?php } ?>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Page Heading -->
-                    
+                    </div>                    
                 </div>
                 <!-- /.container-fluid -->
 
