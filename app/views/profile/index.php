@@ -43,14 +43,13 @@
                                 <div class="card-body">
                                     <div class="m-lg-0">
                                         <div>
-                                          <div class="carousel slide" id="recomended" data-interval="false">
+                                          <div class="carousel slide game-" id="recomended" data-interval="false">
                                             <div class="carousel-inner" role="listbox">
                                               <div class="carousel-item active">
                                                 <div class="d-flex flex-row w-100 container-item">
-                                                <?php
-                                                foreach($data["fav1"] as $fav) :?>
+                                                <?php foreach(array_slice($data["fav1"], 0, 4) as $fav) :?>
                                                     <div class="rounded card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$fav["id"]?>">
-                                                        <div class="card-game-img pb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
+                                                        <div class="card-game-img mb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
                                                             <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $fav["title"])?>.jpg" alt="" class="w-100">
                                                         </div>
                                                         <div class="card-game-desc overflow-auto scrollbar-none">
@@ -65,10 +64,9 @@
                                               </div>
                                               <div class="carousel-item">
                                                 <div class="d-flex flex-row w-100 container-item">
-                                                <?php
-                                                foreach($data["fav2"] as $fav) :?>
+                                                <?php foreach(array_slice($data["fav1"], 4, 4) as $fav) :?>
                                                     <div class="card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$fav["id"]?>">
-                                                        <div class="card-game-img pb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
+                                                        <div class="card-game-img mb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
                                                             <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $fav["title"])?>.jpg" alt="" class="w-100">
                                                         </div>
                                                         <div class="card-game-desc overflow-auto scrollbar-none">
@@ -83,10 +81,9 @@
                                               </div>
                                               <div class="carousel-item">
                                                 <div class="d-flex flex-row w-100 container-item">
-                                                <?php
-                                                foreach($data["fav3"] as $fav) :?>
+                                                <?php foreach(array_slice($data["fav1"], 8, 4) as $fav) :?>
                                                     <div class="card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$fav["id"]?>">
-                                                        <div class="card-game-img pb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
+                                                        <div class="card-game-img mb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
                                                             <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $fav["title"])?>.jpg" alt="" class="w-100">
                                                         </div>
                                                         <div class="card-game-desc overflow-auto scrollbar-none">

@@ -9,9 +9,7 @@ class profile extends Controller{
             $data['name'] = $_SESSION['user']['username'];
         }
         $data["title"] = "Edit Profile";
-        $data["fav1"] = $this->model("Gamelists_model")->getRecommended(0);
-        $data["fav2"] = $this->model("Gamelists_model")->getRecommended(4);
-        $data["fav3"] = $this->model("Gamelists_model")->getRecommended(8);
+        $data["fav1"] = $this->model("Gamelists_model")->getRecommended(12);
         $this->view("template/header", $data);
         $this->view("profile/index", $data);
         $this->view("template/footer");
