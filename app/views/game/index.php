@@ -31,9 +31,9 @@
                             <div class="card-body col-md-9 ml-4 game-desc border-black text-black">
                                 <h4 class="m-0 font-weight-bold pb-4 border-black title"><?=$data["game"]["title"]?></h4>
 
-                                <div class="mt-4">
+                                <div>
                                 <?php foreach(explode(", ", $data["game"]["genres"]) as $genre) { ?>
-                                    <a href="<?=BASE_URL;?>/dash/genre/<?=$genre;?>" class="btn btn-primary"><?=$genre;?></a>
+                                    <a href="<?=BASE_URL;?>/dash/genre/<?=$genre;?>" class="btn btn-primary mt-4"><?=$genre;?></a>
                                 <?php } ?>
                                 </div>
                                 
@@ -78,7 +78,10 @@
                                     </div>
                                 </div>
 
-                                <p class="mt-3"><?=$data["game"]["desc_game"]?></p>
+                                <p class="mt-3 text-justify">&emsp;<?=$data["game"]["desc_game"]?></p>
+
+                                <h3 class="mt-5 mb-0 pb-2 border-black title">Image</h3>
+                                <img src="<?=BASE_URL;?>/public/img/header_game/<?=str_replace(":", "", $data["game"]["title"])?>.jpg" alt="" class="w-100 mt-3">
 
                                 <h3 class="mt-5 mb-0 pb-2 border-black title">Review</h3>
                                 

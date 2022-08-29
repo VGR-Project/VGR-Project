@@ -79,7 +79,7 @@
                                         foreach($data["new"] as $new) :?>
                                                 <div class="card bg-danger h-50 text-white shadow cursor-pointer game-box mb-3" id="<?=$new["id"]?>">
                                                     <div class="card-body w-100 d-flex">
-                                                        <div class="w-50 pr-3 h-100 overflow-hidden d-flex justify-content-center align-items-center">
+                                                        <div class="w-50 mr-3 h-100 overflow-hidden d-flex justify-content-center align-items-center">
                                                             <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $new["title"])?>.jpg" alt="" class="w-100">
                                                         </div>
                                                         <div class="w-50 h-100 overflow-auto scrollbar-none">
@@ -116,7 +116,7 @@
                                                 <div class="d-flex flex-row w-100 container-item">
                                                 <?php foreach(array_slice($data["rec1"], 0, 4) as $rec) :?>
                                                     <div class="rounded card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$rec["id"]?>">
-                                                        <div class="card-game-img pb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
+                                                        <div class="card-game-img mb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
                                                             <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $rec["title"])?>.jpg" alt="" class="w-100">
                                                         </div>
                                                         <div class="card-game-desc overflow-auto scrollbar-none">
@@ -133,7 +133,7 @@
                                                 <div class="d-flex flex-row w-100 container-item">
                                                 <?php foreach(array_slice($data["rec1"], 4, 4) as $rec) :?>
                                                     <div class="card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$rec["id"]?>">
-                                                        <div class="card-game-img pb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
+                                                        <div class="card-game-img mb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
                                                             <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $rec["title"])?>.jpg" alt="" class="w-100">
                                                         </div>
                                                         <div class="card-game-desc overflow-auto scrollbar-none">
@@ -150,7 +150,7 @@
                                                 <div class="d-flex flex-row w-100 container-item">
                                                 <?php foreach(array_slice($data["rec1"], 8, 4) as $rec) :?>
                                                     <div class="card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$rec["id"]?>">
-                                                        <div class="card-game-img pb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
+                                                        <div class="card-game-img mb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
                                                             <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $rec["title"])?>.jpg" alt="" class="w-100">
                                                         </div>
                                                         <div class="card-game-desc overflow-auto scrollbar-none">
@@ -199,7 +199,7 @@
                                                 <div class="d-flex flex-row w-100 container-item">
                                                 <?php foreach(array_slice($data["rand1"], 0, 4) as $rand) :?>
                                                     <div class="rounded card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$rand["id"]?>">
-                                                        <div class="card-game-img pb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
+                                                        <div class="card-game-img mb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
                                                             <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $rand["title"])?>.jpg" alt="" class="w-100">
                                                         </div>
                                                         <div class="card-game-desc overflow-auto scrollbar-none">
@@ -216,7 +216,7 @@
                                                 <div class="d-flex flex-row w-100 container-item">
                                                 <?php foreach(array_slice($data["rand1"], 4, 4) as $rand) :?>
                                                     <div class="card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$rand["id"]?>">
-                                                        <div class="card-game-img pb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
+                                                        <div class="card-game-img mb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
                                                             <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $rand["title"])?>.jpg" alt="" class="w-100">
                                                         </div>
                                                         <div class="card-game-desc overflow-auto scrollbar-none">
@@ -233,7 +233,7 @@
                                                 <div class="d-flex flex-row w-100 container-item">
                                                 <?php foreach(array_slice($data["rand1"], 8, 4) as $rand) :?>
                                                     <div class="card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$rand["id"]?>">
-                                                        <div class="card-game-img pb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
+                                                        <div class="card-game-img mb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
                                                             <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $rand["title"])?>.jpg" alt="" class="w-100">
                                                         </div>
                                                         <div class="card-game-desc overflow-auto scrollbar-none">
