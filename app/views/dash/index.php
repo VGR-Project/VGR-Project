@@ -114,8 +114,7 @@
                                             <div class="carousel-inner" role="listbox">
                                               <div class="carousel-item active">
                                                 <div class="d-flex flex-row w-100 container-item">
-                                                <?php
-                                                foreach($data["rec1"] as $rec) :?>
+                                                <?php foreach(array_slice($data["rec1"], 0, 4) as $rec) :?>
                                                     <div class="rounded card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$rec["id"]?>">
                                                         <div class="card-game-img pb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
                                                             <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $rec["title"])?>.jpg" alt="" class="w-100">
@@ -132,8 +131,7 @@
                                               </div>
                                               <div class="carousel-item">
                                                 <div class="d-flex flex-row w-100 container-item">
-                                                <?php
-                                                foreach($data["rec2"] as $rec) :?>
+                                                <?php foreach(array_slice($data["rec1"], 4, 4) as $rec) :?>
                                                     <div class="card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$rec["id"]?>">
                                                         <div class="card-game-img pb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
                                                             <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $rec["title"])?>.jpg" alt="" class="w-100">
@@ -150,8 +148,7 @@
                                               </div>
                                               <div class="carousel-item">
                                                 <div class="d-flex flex-row w-100 container-item">
-                                                <?php
-                                                foreach($data["rec3"] as $rec) :?>
+                                                <?php foreach(array_slice($data["rec1"], 8, 4) as $rec) :?>
                                                     <div class="card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$rec["id"]?>">
                                                         <div class="card-game-img pb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
                                                             <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $rec["title"])?>.jpg" alt="" class="w-100">
@@ -188,39 +185,119 @@
                         <!-- Pie Chart -->
                         <div class="col-lg-12">
                             <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">May You Like</h6>
+                                </div>
                                 <div class="card-body">
                                     <div class="m-lg-0">
                                         <div>
-                                          <div class="carousel slide" id="information" data-interval="false">
+                                          <div class="carousel slide game-" id="random" data-interval="false">
+                                            <div class="carousel-inner" role="listbox">
+                                              <div class="carousel-item active">
+                                                <div class="d-flex flex-row w-100 container-item">
+                                                <?php foreach(array_slice($data["rand1"], 0, 4) as $rand) :?>
+                                                    <div class="rounded card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$rand["id"]?>">
+                                                        <div class="card-game-img pb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
+                                                            <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $rand["title"])?>.jpg" alt="" class="w-100">
+                                                        </div>
+                                                        <div class="card-game-desc overflow-auto scrollbar-none">
+                                                            <h4 class="m-0 font-weight-bold"><?=$rand["title"]?></h4>
+                                                            <h5><?=$rand["directors"]?></h5>
+                                                            <h6><?=$rand["rating"]?></h6>
+                                                            <div class="text-white-50 small"><?=$rand["genres"]?></div>
+                                                        </div>
+                                                    </div>
+                                                <?php endforeach; ?>
+                                                </div>
+                                              </div>
+                                              <div class="carousel-item">
+                                                <div class="d-flex flex-row w-100 container-item">
+                                                <?php foreach(array_slice($data["rand1"], 4, 4) as $rand) :?>
+                                                    <div class="card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$rand["id"]?>">
+                                                        <div class="card-game-img pb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
+                                                            <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $rand["title"])?>.jpg" alt="" class="w-100">
+                                                        </div>
+                                                        <div class="card-game-desc overflow-auto scrollbar-none">
+                                                            <h4 class="m-0 font-weight-bold"><?=$rand["title"]?></h4>
+                                                            <h5><?=$rand["directors"]?></h5>
+                                                            <h6><?=$rand["rating"]?></h6>
+                                                            <div class="text-white-50 small"><?=$rand["genres"]?></div>
+                                                        </div>
+                                                    </div>
+                                                <?php endforeach; ?>
+                                                </div>
+                                              </div>
+                                              <div class="carousel-item">
+                                                <div class="d-flex flex-row w-100 container-item">
+                                                <?php foreach(array_slice($data["rand1"], 8, 4) as $rand) :?>
+                                                    <div class="card-body bg-danger text-white col-md-3 cursor-pointer game-box" id="<?=$rand["id"]?>">
+                                                        <div class="card-game-img pb-3 d-flex justify-content-center align-items-center overflow-hidden w-100">
+                                                            <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $rand["title"])?>.jpg" alt="" class="w-100">
+                                                        </div>
+                                                        <div class="card-game-desc overflow-auto scrollbar-none">
+                                                            <h4 class="m-0 font-weight-bold"><?=$rand["title"]?></h4>
+                                                            <h5><?=$rand["directors"]?></h5>
+                                                            <h6><?=$rand["rating"]?></h6>
+                                                            <div class="text-white-50 small"><?=$rand["genres"]?></div>
+                                                        </div>
+                                                    </div>
+                                                <?php endforeach; ?>
+                                                </div>
+                                              </div>
+                                            </div>
+                                            <a class="carousel-control-prev carousel-control" href="#random" role="button" data-slide="prev">
+                                              <span class="carousel-control-prev-icon wb-chevron-left" aria-hidden="true"></span>
+                                              <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="carousel-control-next carousel-control" href="#random" role="button" data-slide="next">
+                                              <span class="carousel-control-next-icon wb-chevron-right" aria-hidden="true"></span>
+                                              <span class="sr-only">Next</span>
+                                            </a>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+                        <!-- Pie Chart -->
+                        <div class="col-lg-12">
+                            <div class="card shadow mb-4">
+                                <div class="card-body">
+                                    <div class="m-lg-0">
+                                        <div>
+                                          <div class="carousel slide" id="information" data-ride="carousel">
                                             <div class="carousel-inner" role="listbox">
                                               <div class="carousel-item active">
                                                 <div class="d-flex flex-row justify-content-between w-100 container-item">
-                                                    <div class="d-flex justify-content-center align-items-center rounded card-body bg-danger col-md-6 header-image-carousel overflow-hidden">
-                                                        <img src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="" class="w-100">
+                                                <?php foreach(array_slice($data["rand2"], 0, 2) as $rand) :?>
+                                                    <div class="d-flex justify-content-center align-items-center rounded card-body bg-danger col-md-6 header-image-carousel overflow-hidden game-box cursor-pointer" id="<?=$rand["id"]?>">
+                                                        <img class="w-100" src="<?=BASE_URL;?>/public/img/header_game/<?=str_replace(":", "", $rand["title"])?>.jpg" alt="...">
                                                     </div>
-                                                    <div class="d-flex justify-content-center align-items-center rounded card-body bg-danger col-md-6 header-image-carousel overflow-hidden">
-                                                        <img src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="" class="w-100">
-                                                    </div>
+                                                <?php endforeach; ?>
                                                 </div>
                                               </div>
                                               <div class="carousel-item">
                                                 <div class="d-flex flex-row justify-content-between w-100 container-item">
-                                                    <div class="d-flex justify-content-center align-items-center rounded card-body bg-danger col-md-6 header-image-carousel overflow-hidden">
-                                                        <img src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="" class="w-100">
+                                                <?php foreach(array_slice($data["rand2"], 2, 2) as $rand) :?>
+                                                    <div class="d-flex justify-content-center align-items-center rounded card-body bg-danger col-md-6 header-image-carousel overflow-hidden game-box cursor-pointer" id="<?=$rand["id"]?>">
+                                                        <img class="w-100" src="<?=BASE_URL;?>/public/img/header_game/<?=str_replace(":", "", $rand["title"])?>.jpg" alt="...">
                                                     </div>
-                                                    <div class="d-flex justify-content-center align-items-center rounded card-body bg-danger col-md-6 header-image-carousel overflow-hidden">
-                                                        <img src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="" class="w-100">
-                                                    </div>
+                                                <?php endforeach; ?>
                                                 </div>
                                               </div>
                                               <div class="carousel-item">
                                                 <div class="d-flex flex-row justify-content-between w-100 container-item">
-                                                    <div class="d-flex justify-content-center align-items-center rounded card-body bg-danger col-md-6 header-image-carousel overflow-hidden">
-                                                        <img src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="" class="w-100">
+                                                <?php foreach(array_slice($data["rand2"], 4, 2) as $rand) :?>
+                                                    <div class="d-flex justify-content-center align-items-center rounded card-body bg-danger col-md-6 header-image-carousel overflow-hidden game-box cursor-pointer" id="<?=$rand["id"]?>">
+                                                        <img class="w-100" src="<?=BASE_URL;?>/public/img/header_game/<?=str_replace(":", "", $rand["title"])?>.jpg" alt="...">
                                                     </div>
-                                                    <div class="d-flex justify-content-center align-items-center rounded card-body bg-danger col-md-6 header-image-carousel overflow-hidden">
-                                                        <img src="<?=BASE_URL;?>/public/img/header_game/omori.jpg" alt="" class="w-100">
-                                                    </div>
+                                                <?php endforeach; ?>
                                                 </div>
                                               </div>
                                             </div>

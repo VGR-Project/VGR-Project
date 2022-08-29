@@ -9,9 +9,9 @@ class Dash extends Controller {
     $data["title"] = "Dashboard";
     $data["new"] = $this->model("Gamelists_model")->getNew();
     $data["old"] = $this->model("Gamelists_model")->getOld();
-    $data["rec1"] = $this->model("Gamelists_model")->getRecommended(0);
-    $data["rec2"] = $this->model("Gamelists_model")->getRecommended(4);
-    $data["rec3"] = $this->model("Gamelists_model")->getRecommended(8);
+    $data["rec1"] = $this->model("Gamelists_model")->getRecommended(12);
+    $data["rand1"] = $this->model("Gamelists_model")->getRandom(12);
+    $data["rand2"] = $this->model("Gamelists_model")->getRandom(6);
     $this->view("template/header", $data);
     $this->view("dash/index", $data);
     $this->view("template/footer");
