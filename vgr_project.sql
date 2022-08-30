@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 28, 2022 at 12:50 PM
+-- Generation Time: Aug 30, 2022 at 12:29 PM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -129,7 +129,7 @@ INSERT INTO `rating` (`id_game`, `rating`, `email_user`) VALUES
 (16, '9.40', 'Admin@gmail.com'),
 (17, '9.40', 'Admin@gmail.com'),
 (18, '9.50', 'Admin@gmail.com'),
-(19, '9.20', 'Admin@gmail.com'),
+(19, '9.00', 'Admin@gmail.com'),
 (20, '9.40', 'Admin@gmail.com'),
 (21, '9.00', 'Admin@gmail.com'),
 (22, '9.20', 'Admin@gmail.com'),
@@ -160,7 +160,9 @@ INSERT INTO `rating` (`id_game`, `rating`, `email_user`) VALUES
 (47, '8.50', 'Admin@gmail.com'),
 (48, '8.80', 'Admin@gmail.com'),
 (49, '8.80', 'Admin@gmail.com'),
-(50, '8.70', 'Admin@gmail.com');
+(50, '8.70', 'Admin@gmail.com'),
+(19, '1.00', 'gnendraaw@email.com'),
+(4, '9.00', 'gnendraaw@email.com');
 
 -- --------------------------------------------------------
 
@@ -172,16 +174,17 @@ CREATE TABLE `review` (
   `id_game` int(11) NOT NULL,
   `review` text NOT NULL,
   `date_review` datetime NOT NULL,
-  `email_user` varchar(255) NOT NULL
+  `email_user` varchar(255) NOT NULL,
+  `id_review` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `review`
 --
 
-INSERT INTO `review` (`id_game`, `review`, `date_review`, `email_user`) VALUES
-(1, 'Awsome...', '2022-08-28 15:07:48', 'Admin@gmail.com'),
-(1, 'Hi Admin, can I be admin too? hehe...', '2022-08-28 07:41:32', 'vaisyagovinandas@gmail.com');
+INSERT INTO `review` (`id_game`, `review`, `date_review`, `email_user`, `id_review`) VALUES
+(1, 'Awsome...', '2022-08-28 15:07:48', 'Admin@gmail.com', 1),
+(1, 'Hi', '2022-08-30 12:22:07', 'vaisyagovinandas@gmail.com', 6);
 
 -- --------------------------------------------------------
 
@@ -202,6 +205,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`Username`, `email`, `Password`) VALUES
 ('Admin', 'Admin@gmail.com', 'Admin'),
 ('eka', 'eka@gmail.com', '123'),
+('gnendraaw', 'gnendraaw@email.com', 'password'),
 ('ex', 'vaisyagovinandas@gmail.com', '123');
 
 --
@@ -225,6 +229,7 @@ ALTER TABLE `rating`
 -- Indexes for table `review`
 --
 ALTER TABLE `review`
+  ADD PRIMARY KEY (`id_review`),
   ADD KEY `id_game` (`id_game`,`email_user`),
   ADD KEY `email_user` (`email_user`);
 
@@ -243,6 +248,12 @@ ALTER TABLE `users`
 --
 ALTER TABLE `gamelists`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+
+--
+-- AUTO_INCREMENT for table `review`
+--
+ALTER TABLE `review`
+  MODIFY `id_review` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables

@@ -134,7 +134,7 @@
 }
 
 .carousel-control:hover {
-  background-color: grey;
+  background-color: rgb(128, 128, 128, 0.3);
 }
 
 .carousel-control-prev {

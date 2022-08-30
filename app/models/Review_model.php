@@ -30,8 +30,18 @@ class Review_model
     }
 
     public function deleteReview($id) {
-      $this->db->query("DELETE FROM {$this->table} WHERE id_review = :id");
+      $this->db->query("DELETE FROM {$this->table} 
+        WHERE id_review = :id");
       $this->db->bind("id", $id);
+      return $this->db->rowCount();
+    }
+
+    public function updateReview($id, $review) {
+      $this->db->query("UPDATE {$this->table} 
+        SET `review` = :review
+        WHERE id_review = :id");
+      $this->db->bind("id", $id);
+      $this->db->bind("review", $review);
       return $this->db->rowCount();
     }
 }

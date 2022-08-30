@@ -14,7 +14,7 @@
             <div id="content">
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid col-lg-8">
+                <div class="container-fluid col-lg-12">
 
                     <!-- Page Heading -->
                     <h1 class="h3 mb-2 text-gray-800">Game Lists</h1>

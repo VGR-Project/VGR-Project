@@ -47,4 +47,10 @@ class Game extends Controller {
     $this->model("Review_model")->deleteReview($id);
     header("location: ".BASE_URL."/game/index/".$idGame);
   }
+
+  public function updatereview($id, $idGame) {
+    session_start();
+    $this->model("Review_model")->updateReview($id, $_POST['review']);
+    header("location: ".BASE_URL."/game/index/".$idGame);
+  }
 }
