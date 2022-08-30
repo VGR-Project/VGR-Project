@@ -15,7 +15,27 @@ class Login extends Controller {
             'email' => $_POST['email'],
             'password' => $_POST['password'],
         ];
-        if( empty($data["email"]) ||
+    //     $Count= mysqli_num_rows->checkUser;
+
+
+    //      if ($hitung>0){
+    //         $getRole = mysqli_fetch_array->checkUser;
+    //         $role = $getRole ['role']
+
+    //         if ($role=='admin'){
+    //             $_SESSION['log'] = 'Logged';
+    //             $_SESSION['role'] = 'admin';
+    //         header('location: ".BASE_URL."/admin')
+    //         } else {
+    //             $_SESSION['log'] = 'Logged';
+    //             $_SESSION['role'] = 'user';
+    //         header('location: ".BASE_URL."/user')
+    //     }
+
+    //  }else{
+    //     echo "Data not found";
+    // }
+        if( empty($data["email"]) || 
             empty($data["password"])) {
             unset($_POST);
             header("location: ".BASE_URL."/login");

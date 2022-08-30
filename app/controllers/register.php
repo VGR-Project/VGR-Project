@@ -17,6 +17,7 @@ class Register extends Controller {
             'email' => $_POST['email'],
             'password' => $_POST['password'],
             'repeat' => $_POST['repeat'],
+            'role' => 'user',
         ];
         if( empty($data["username"]) ||
             empty($data["email"]) ||
@@ -40,6 +41,7 @@ class Register extends Controller {
                 $_SESSION["user"] = [
                     'username' => $row['Username'],
                     'email' => $row['email'],
+                    'role' => $row['role']
                 ];
                 unset($_POST);
                 header("location: ".BASE_URL);
