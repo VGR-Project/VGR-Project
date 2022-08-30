@@ -104,14 +104,38 @@
                                                     <img class="img-profile rounded-circle mr-3" src="<?=BASE_URL;?>/public/img/undraw_profile.svg">
                                                     <span><?=$review['Username']?></span>
                                                 </div>
-                                                <p class="mt-3 mb-0"><?=$review['review']?></p>
-                                                <div class="d-flex justify-content-end w-100">
-                                                <?php if(isset($data['name'])) { 
-                                                    if($review['email_user'] === $_SESSION['user']['email']) {?>
-                                                    <a href="" class="btn btn-warning mt-2">Edit</a>
-                                                    <a href="<?=BASE_URL;?>/game/deletereview/<?=$review['id_review'];?>/<?=$data['idGame'];?>" class="btn btn-danger mt-2 ml-2">Delete</a>
+                                                <div class="
+                                                <?php 
+                                                if(isset($data['name'])) {
+                                                    if($review['email_user'] === $_SESSION['user']['email']) { ?>
+                                                    review-box
                                                 <?php }} ?>
+                                                ">
+                                                    <p class="mt-3 mb-0"><?=$review['review']?></p>
+                                                    <div class="d-flex justify-content-end w-100">
+                                                    <?php if(isset($data['name'])) { 
+                                                        if($review['email_user'] === $_SESSION['user']['email']) {?>
+                                                        <a class="btn btn-warning mt-2 edit" id="<?=$review['id_review'];?>">Edit</a>
+                                                        <a href="<?=BASE_URL;?>/game/deletereview/<?=$review['id_review']?>/<?=$data['idGame'];?>" class="btn btn-danger mt-2 ml-2">Delete</a>
+                                                    <?php }} ?>
+                                                    </div>
                                                 </div>
+                                                <form class="w-100 d-none
+                                                <?php 
+                                                if(isset($data['name'])) {
+                                                    if($review['email_user'] === $_SESSION['user']['email']) { ?>
+                                                    review-box-form
+                                                <?php }} ?>
+                                                " method="post" action="<?=BASE_URL;?>/game/updatereview/<?=$review['id_review']?>/<?=$data['idGame'];?>">
+                                                    <textarea class="mt-3 mb-0 w-100" rows="1" name="review"><?=$review['review']?></textarea>
+                                                    <div class="d-flex justify-content-end w-100">
+                                                    <?php if(isset($data['name'])) { 
+                                                        if($review['email_user'] === $_SESSION['user']['email']) {?>
+                                                        <a class="btn btn-warning mt-2 back" id="<?=$review['id_review'];?>">Back</a>
+                                                        <button type="submit" class="btn btn-primary mt-2 ml-2">Submit</button>
+                                                    <?php }} ?>
+                                                    </div>
+                                                </form>
                                             </div>
                                         </div>
                                         <?php } ?>
