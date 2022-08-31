@@ -29,12 +29,14 @@
     </li>
     </div>
 
+    <?php if (isset($data['name']) && $_SESSION['user']['role'] != "user") { ?>
     <li class="nav-item">
         <a class="nav-link" href="<?= BASE_URL ?>/gamelists">
             <i class="fas fa-fw fa-table"></i>
             <span>Game List</span>
         </a>
     </li>
+    <?php } ?>
 
     <!-- Topbar Search -->
     <!-- <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
