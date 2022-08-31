@@ -15,6 +15,7 @@ class Login extends Controller {
             'email' => $_POST['email'],
             'password' => $_POST['password'],
         ];
+
         if( empty($data["email"]) || 
             empty($data["password"])) {
             unset($_POST);
@@ -27,10 +28,19 @@ class Login extends Controller {
                 $_SESSION["user"] = [
                     'username' => $row['Username'],
                     'email' => $row['email'],
-                    'role' => $row['role']
+                    'role' => $row['role'],
+    
                 ];
                 unset($_POST);
-                header("location: ".BASE_URL);
+                if($_SESSION['user']['role'] == "admin"){
+
+                    header("location: ".BASE_URL."/dash");
+                    
+                }elseif($_SESSION['user']['role'] == "sub_admin"){
+                     header("Location: " . BASE_URL . "/sub_admin");
+                }else{
+                    header("Location: " . BASE_URL . "/user");
+                }
             } else {
                 unset($_POST);
                 header("location: ".BASE_URL."/login");
