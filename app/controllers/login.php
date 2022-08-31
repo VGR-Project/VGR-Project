@@ -28,6 +28,7 @@ class Login extends Controller {
                 $_SESSION["user"] = [
                     'username' => $row['Username'],
                     'email' => $row['email'],
+                    'password' => $row['Password'],
                     'role' => $row['role']
                 ];
                 unset($_POST);

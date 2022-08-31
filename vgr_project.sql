@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 30, 2022 at 11:18 PM
+-- Generation Time: Aug 31, 2022 at 03:33 PM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -209,7 +209,6 @@ INSERT INTO `users` (`Username`, `email`, `Password`, `role`) VALUES
 ('eka', 'eka@gmail.com', '123', 'user'),
 ('gnendraaw', 'gnendraaw@email.com', 'password', 'user'),
 ('NYX', 'isaputra901@smk.belajar.id', 'zxc', 'user'),
-('NYX', 'izanami@gmail.com', 'sdf', 'user'),
 ('indra', 'mithniteneyyy@gmail.com', '1234', 'user'),
 ('ex', 'vaisyagovinandas@gmail.com', '123', 'sub_admin');
 
@@ -268,15 +267,15 @@ ALTER TABLE `review`
 -- Constraints for table `rating`
 --
 ALTER TABLE `rating`
-  ADD CONSTRAINT `rating_ibfk_1` FOREIGN KEY (`id_game`) REFERENCES `gamelists` (`id`),
-  ADD CONSTRAINT `rating_ibfk_2` FOREIGN KEY (`email_user`) REFERENCES `users` (`email`);
+  ADD CONSTRAINT `rating_ibfk_1` FOREIGN KEY (`email_user`) REFERENCES `users` (`email`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `rating_ibfk_2` FOREIGN KEY (`id_game`) REFERENCES `gamelists` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `review`
 --
 ALTER TABLE `review`
-  ADD CONSTRAINT `review_ibfk_1` FOREIGN KEY (`id_game`) REFERENCES `gamelists` (`id`),
-  ADD CONSTRAINT `review_ibfk_2` FOREIGN KEY (`email_user`) REFERENCES `users` (`email`);
+  ADD CONSTRAINT `review_ibfk_1` FOREIGN KEY (`email_user`) REFERENCES `users` (`email`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `review_ibfk_2` FOREIGN KEY (`id_game`) REFERENCES `gamelists` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

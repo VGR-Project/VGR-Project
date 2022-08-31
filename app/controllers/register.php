@@ -31,16 +31,17 @@ class Register extends Controller {
             header("location: ".BASE_URL."/register");
             // isiin alert, lewat param
         } else {
-            if($this->model("Users_models")->checkDataByEmail($data) > 0) {
+            if($this->model("Users_model")->checkDataByEmail($data) > 0) {
                 unset($_POST);
                 header("location: ".BASE_URL."/register");
             } else {
-                $this->model("Users_models")->add($data);
-                $row = $this->model("Users_models")->getDataByEmail($data);
+                $this->model("Users_model")->add($data);
+                $row = $this->model("Users_model")->getDataByEmail($data);
                 session_start();
                 $_SESSION["user"] = [
                     'username' => $row['Username'],
                     'email' => $row['email'],
+                    'password' => $row['Password'],
                     'role' => $row['role']
                 ];
                 unset($_POST);

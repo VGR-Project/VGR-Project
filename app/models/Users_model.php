@@ -37,15 +37,18 @@ class Users_model
     }
 
     public function validateUser($data){
-        $query = 'SELECT * FROM {$this->table} WHERE email = :email';
-        $this->db->query($query);
+        $this->db->query("SELECT * FROM {$this->table} WHERE email = :email");
         $this->db->bind('email', $data['email']);
-
         return $this->db->result();
-
     }
 
-   
-
- 
+    public function update($data) {
+        $this->db->query("UPDATE {$this->table} SET `Username`=:username,`email`=:emailPost,`Password`=:password 
+            WHERE email = :email");
+        $this->db->bind('email', $_SESSION['user']['email']);
+        $this->db->bind('username', $data['username']);
+        $this->db->bind('emailPost', $data['email']);
+        $this->db->bind('password', $data['password']);
+        return $this->db->rowCount();
+    }
 }
