@@ -22,8 +22,8 @@ class Login extends Controller {
             header("location: ".BASE_URL."/login");
             // isiin alert, lewat param
         } else {
-            if($this->model("Users_models")->checkDataByEmail($data) > 0) {
-                $row = $this->model("Users_models")->getDataByEmail($data);
+            if($this->model("Users_model")->checkDataByEmail($data) > 0) {
+                $row = $this->model("Users_model")->getDataByEmail($data);
                 session_start();
                 $_SESSION["user"] = [
                     'username' => $row['Username'],

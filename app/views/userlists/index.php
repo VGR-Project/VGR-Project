@@ -59,9 +59,9 @@
                                 <td><?=$row["email"]?></td>
                                 <td><?=$row["Password"]?></td>
                                 <td><?=$row["role"]?></td>
-                                <!-- <td><button class="btn btn-success" onclick="window.location.href='<?= BASE_URL?>/game/<?=$row['id']?>'">Detail</button></td>
-                                <td class="tampilModalUbah" data-id="<?= $row['id'];?>"><a data-toggle="modal" data-target="#formModal"><button class="btn btn-warning">Edit</button></td>
-                                <td onclick="window.location.href='<?=BASE_URL;?>/gamelists/delete/<?=$row['id']?>'"><button class="btn btn-danger">Delete</button></td> -->
+                                <td class="text-center"><button class="btn btn-success" onclick="window.location.href='<?= BASE_URL?>/game/<?=$row['email']?>'">Detail</button></td>
+                                <td class="tampilModalUbah text-center" data-id="<?= $row['email'];?>"><a data-toggle="modal" data-target="#formModal"><button class="btn btn-warning">Edit</button></td>
+                                <td class="text-center"><button onclick="window.location.href='<?=BASE_URL;?>/gamelists/delete/<?=$row['email']?>'" class="btn btn-danger">Delete</button></td>
                             </tr>
                             <?php endforeach;?>
                         </tbody>

@@ -4,7 +4,12 @@ class Gamelists extends Controller{
     public function index(){
         session_start();
         if(isset($_SESSION["user"])) {
+            if($_SESSION["user"] === "user") {
+                header('Location: '.BASE_URL);
+            }
             $data['name'] = $_SESSION['user']['username'];
+        } else {
+            header('Location: '.BASE_URL);
         }
         $data["title"] = "Game List";
         $data["game-db"] = $this->model("Gamelists_model")->getAll();
@@ -14,6 +19,14 @@ class Gamelists extends Controller{
     }
 
     public function tambah(){
+        if(isset($_SESSION["user"])) {
+            if($_SESSION["user"] === "user") {
+                header('Location: '.BASE_URL);
+            }
+            $data['name'] = $_SESSION['user']['username'];
+        } else {
+            header('Location: '.BASE_URL);
+        }
         if($this->model('Gamelists_model')->tambahGame($_POST) > 0){
             header('Location: ' . BASE_URL . "/gamelists/index");
             exit;
@@ -23,20 +36,41 @@ class Gamelists extends Controller{
     }
 
     public function delete($id){
-        if($this->model('Gamelists_model')->deleteGame($id) > 0){
-            header('Location: ' . BASE_URL . "/gamelists/index");
-            exit;
-        } else{
-            header('Location:' . BASE_URL . '/gamelists/index');
+        if(isset($_SESSION["user"])) {
+            if($_SESSION["user"] === "user") {
+                header('Location: '.BASE_URL);
+            }
+            if($this->model('Gamelists_model')->deleteGame($id) > 0){
+                header('Location: ' . BASE_URL . "/gamelists/index");
+                exit;
+            } else{
+                header('Location:' . BASE_URL . '/gamelists/index');
+            }
+        } else {
+            header('Location: '.BASE_URL);
         }
     }    
 
     public function ubah(){
-        $this->model('Gamelists_model')->ubahDataGame($_POST);
-        header('Location: ' . BASE_URL . "/gamelists/index");
+        if(isset($_SESSION["user"])) {
+            if($_SESSION["user"] === "user") {
+                header('Location: '.BASE_URL);
+            }
+            $this->model('Gamelists_model')->ubahDataGame($_POST);
+            header('Location: ' . BASE_URL . "/gamelists/index");
+        } else {
+            header('Location: '.BASE_URL);
+        }
     }
 
     public function getUbah(){
-        echo json_encode($this->model("Gamelists_model")->getGameById_forEdit($_POST['id']));
+        if(isset($_SESSION["user"])) {
+            if($_SESSION["user"] === "user") {
+                header('Location: '.BASE_URL);
+            }
+            echo json_encode($this->model("Gamelists_model")->getGameById_forEdit($_POST['id']));
+        } else {
+            header('Location: '.BASE_URL);
+        }
     }
 }
