@@ -4,7 +4,7 @@ class Gamelists extends Controller{
     public function index(){
         session_start();
         if(isset($_SESSION["user"])) {
-            if($_SESSION["user"] === "user") {
+            if($_SESSION["user"]['role'] === "user") {
                 header('Location: '.BASE_URL);
             }
             $data['name'] = $_SESSION['user']['username'];
@@ -20,7 +20,7 @@ class Gamelists extends Controller{
 
     public function tambah(){
         if(isset($_SESSION["user"])) {
-            if($_SESSION["user"] === "user") {
+            if($_SESSION["user"]['role'] === "user") {
                 header('Location: '.BASE_URL);
             }
             $data['name'] = $_SESSION['user']['username'];
@@ -37,7 +37,7 @@ class Gamelists extends Controller{
 
     public function delete($id){
         if(isset($_SESSION["user"])) {
-            if($_SESSION["user"] === "user") {
+            if($_SESSION["user"]['role'] === "user") {
                 header('Location: '.BASE_URL);
             }
             if($this->model('Gamelists_model')->deleteGame($id) > 0){
@@ -53,7 +53,7 @@ class Gamelists extends Controller{
 
     public function ubah(){
         if(isset($_SESSION["user"])) {
-            if($_SESSION["user"] === "user") {
+            if($_SESSION["user"]['role'] === "user") {
                 header('Location: '.BASE_URL);
             }
             $this->model('Gamelists_model')->ubahDataGame($_POST);
@@ -65,7 +65,7 @@ class Gamelists extends Controller{
 
     public function getUbah(){
         if(isset($_SESSION["user"])) {
-            if($_SESSION["user"] === "user") {
+            if($_SESSION["user"]['role'] === "user") {
                 header('Location: '.BASE_URL);
             }
             echo json_encode($this->model("Gamelists_model")->getGameById_forEdit($_POST['id']));
