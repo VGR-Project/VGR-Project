@@ -1,15 +1,15 @@
 <?php
 
-class Gamelists extends Controller{
+class Userlists extends Controller{
     public function index(){
         session_start();
         if(isset($_SESSION["user"])) {
             $data['name'] = $_SESSION['user']['username'];
         }
-        $data["title"] = "Game List";
-        $data["game-db"] = $this->model("Gamelists_model")->getAll();
+        $data["title"] = "User List";
+        $data["user-db"] = $this->model("Users_model")->getAll();
         $this->view("template/header", $data);
-        $this->view("gamelists/index", $data);
+        $this->view("userlists/index", $data);
         $this->view("template/footer");
     }
 

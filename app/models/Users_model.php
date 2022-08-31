@@ -1,6 +1,6 @@
 <?php
 
-class Users_models
+class Users_model
 {
     private $table = "users";
     private $db;
@@ -8,6 +8,11 @@ class Users_models
     public function __construct()
     {
         $this->db = new Database;
+    }
+
+    public function getAll() {
+        $this->db->query("SELECT * FROM {$this->table}");
+        return $this->db->resultAll();
     }
 
     public function add($data) {
