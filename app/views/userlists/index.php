@@ -61,7 +61,7 @@
                                 <td><?=$row["role"]?></td>
                                 <td class="text-center"><button class="btn btn-success" onclick="window.location.href='<?= BASE_URL?>/game/<?=$row['email']?>'">Detail</button></td>
                                 <td class="tampilModalUbahUser text-center" data-id="<?= $row['id'];?>"><a data-toggle="modal" data-target="#formModalUser"><button class="btn btn-warning">Edit</button></td>
-                                <td class="text-center"><button onclick="window.location.href='<?=BASE_URL;?>/userlists/delete/<?=$row['id']?>'" class="btn btn-danger">Delete</button></td>
+                                <td class="text-center"><button onclick="window.location.href='<?=BASE_URL;?>/userlists/delete/<?=$row['email']?>'" class="btn btn-danger">Delete</button></td>
                             </tr>
                             <?php endforeach;?>
                         </tbody>
