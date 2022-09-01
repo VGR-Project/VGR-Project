@@ -90,8 +90,12 @@
   background-size: cover;
 }
 
+.bg-register-image{
+  background-image: url(../img/register.jpg);
+  }
+
 .bg-login-image{
-  background-image: url(../img/loginIMG.png);
+  background-image: url(../img/login.png);
 }
 
 .card-custom {

@@ -101,7 +101,7 @@
                                         ">
                                             <div class="card-body">
                                                 <div class="d-flex align-items-center review-comment pb-2">
-                                                    <img class="img-profile rounded-circle mr-3" src="<?=BASE_URL;?>/public/img/undraw_profile.svg">
+                                                    <img class="img-profile rounded-circle mr-3" src="<?=BASE_URL;?>/public/img/lilgru.jpg">
                                                     <span><?=$review['Username']?></span>
                                                 </div>
                                                 <div class="
@@ -144,7 +144,7 @@
                                 <?php if(!isset($data['name'])) {} else {?>
                                 <div class="card col-sd-12 review">
                                     <div class="card-body d-flex">
-                                        <img class="img-profile rounded-circle mr-3" src="<?=BASE_URL;?>/public/img/undraw_profile.svg">
+                                        <img class="img-profile rounded-circle mr-3" src="<?=BASE_URL;?>/public/img/lilgru.jpg">
                                         <form action="<?=BASE_URL;?>/game/review/<?=$data['idGame'];?>" method="post" class="d-flex w-100">
                                             <textarea name="review" rows="1" placeholder="Type here..." class="w-100"></textarea>
                                             <button type="submit" class="w-auto ml-3">Submit</button>
