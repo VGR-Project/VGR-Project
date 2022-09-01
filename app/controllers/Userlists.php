@@ -24,7 +24,7 @@ class Userlists extends Controller{
             if($_SESSION["user"]['role'] != "admin") {
                 header('Location: '.BASE_URL);
             }
-            if($this->model('Users_model')->add($_POST) > 0){
+            if($this->model('Users_model')->tambahUser($_POST) > 0){
                 header('Location: ' . BASE_URL . "/userlists/index");
                 exit;
             } else{
