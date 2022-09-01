@@ -52,6 +52,36 @@ class Users_model
         return $this->db->rowCount();
     }
 
+    public function tambahUser($data){
+        $query = "INSERT INTO {$this->table} 
+          VALUES(null, :username, :email, :pass, :roleLevel)";
+        $this->db->query($query);
+        $this->db->bind('username', $data['username']);
+        $this->db->bind('email', $data['email']);
+        $this->db->bind('pass', $data['pass']);
+        $this->db->bind('roleLevel', $data['roleLevel']);
+        return $this->db->rowCount();
+      }
+
+    public function ubahDataUser($data){
+        $query = "UPDATE {$this->table} SET 
+          `Username` = :username, 
+          `email` = :email, 
+          `Password` = :pass,
+          `role` = :roleLevel 
+          WHERE `id` = :id";
+        $this->db->query($query);
+        $this->db->bind('id', $data['id']);
+        $this->db->bind('username', $data['username']);
+        $this->db->bind('email', $data['email']);
+        $this->db->bind('pass', $data['pass']);
+        $this->db->bind('roleLevel', $data['roleLevel']);
+        // var_dump($data);
+        echo "<br>";
+        echo "<br>";
+        return $this->db->rowCount();
+      }
+
     public function deleteUser($email){
         $this->db->query("DELETE FROM $this->table WHERE email = :email");
         $this->db->bind('email', $email);
@@ -59,9 +89,9 @@ class Users_model
         return $this->db->rowCount();
     }
 
-    public function getUserById_forEdit($email){
-        $this->db->query("SELECT * FROM $this->table WHERE email =:email");
-        $this->db->bind('email', $email);
+    public function getUserById_forEdit($id){
+        $this->db->query("SELECT * FROM $this->table WHERE id = :id");
+        $this->db->bind('id', $id);
         return $this->db->result();
       }
 }
