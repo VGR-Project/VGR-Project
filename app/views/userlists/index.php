@@ -22,10 +22,10 @@
                             href="../../../phpmyadmin">Database Structure</a>.</p>
 
                     <!-- DataTales Example -->
-                    <button class="btn btn-primary mb-3 tampilModalTambah" data-toggle="modal" data-target="#formModal">Add User</button>
+                    <button class="btn btn-primary mb-3 tampilModalTambahUser" data-toggle="modal" data-target="#formModalUser">Add User</button>
                     <div class='card shadow mb-4'>
                         <div class='card-header py-3'>
-                            <h6 class='m-0 font-weight-bold text-primary'>DataTables Example</h6>
+                            <h6 class='m-0 font-weight-bold text-primary'>User Datas</h6>
                         </div>
                         <div class='card-body'>
                             <div class='table-responsive'>
@@ -60,8 +60,8 @@
                                 <td><?=$row["Password"]?></td>
                                 <td><?=$row["role"]?></td>
                                 <td class="text-center"><button class="btn btn-success" onclick="window.location.href='<?= BASE_URL?>/game/<?=$row['email']?>'">Detail</button></td>
-                                <td class="tampilModalUbah text-center" data-id="<?= $row['email'];?>"><a data-toggle="modal" data-target="#formModal"><button class="btn btn-warning">Edit</button></td>
-                                <td class="text-center"><button onclick="window.location.href='<?=BASE_URL;?>/gamelists/delete/<?=$row['email']?>'" class="btn btn-danger">Delete</button></td>
+                                <td class="tampilModalUbahUser text-center" data-id="<?= $row['email'];?>"><a data-toggle="modal" data-target="#formModalUser"><button class="btn btn-warning">Edit</button></td>
+                                <td class="text-center"><button onclick="window.location.href='<?=BASE_URL;?>/userlists/delete/<?=$row['id']?>'" class="btn btn-danger">Delete</button></td>
                             </tr>
                             <?php endforeach;?>
                         </tbody>
@@ -112,7 +112,7 @@
         </div>
     </div>
 
-    <div class="modal fade" id="formModal" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true" style="margin-top:50px;">
+    <div class="modal fade" id="formModalUser" tabindex="-1" role="dialog" aria-labelledby="formModalLabel" aria-hidden="true" style="margin-top:50px;">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -122,35 +122,26 @@
         </button>
       </div>
       <div class="modal-body">
-        <form action="<?= BASE_URL ?>/gamelists/tambah" method="POST">
-        <input type="hidden" id="id_game" name="id_game"> 
+        <form action="<?= BASE_URL ?>/userlists/tambah" method="POST">
+        <input type="email" id="user_email" name="user_email"> 
         <div class="form-group">
-            <label for="game-title">Game Title</label>
-            <input type="text" class="form-control" id="gameTitle" name="gameTitle">
+            <label for="game-title">Username</label>
+            <input type="text" class="form-control" id="username" name="username">
         </div>
 
         <div class="form-group">
-            <label for="game-directors">Game Directors</label>
-            <input type="text" class="form-control" id="gameDirectors" name="gameDirectors">
+            <label for="game-directors">Email</label>
+            <input type="email" class="form-control" id="email" name="email">
         </div>
 
         <div class="form-group">
-            <label for="game-release">Game Release</label>
-            <input type="date" class="form-control" id="gameRelease" name="gameRelease">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" name="password">
         </div>
 
         <div class="form-group">
-            <label for="game-release">Year Release</label>
-            <input type="text" class="form-control" id="yearRelease" name="yearRelease">
-        </div>
-        
-        <div class="form-group">
-            <label for="game-desc">Game Desc</label>
-            <textarea class="form-control" id="gameDesc" name="gameDesc" style="height: 150px;"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="game-genres">Game Genres</label>
-            <input type="text" class="form-control" id="gameGenres" name="gameGenres">
+            <label for="role">Role</label>
+            <input type="text" class="form-control" id="role" name="role">
         </div>
 
       </div>
