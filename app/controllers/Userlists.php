@@ -19,12 +19,13 @@ class Userlists extends Controller{
     }
 
     public function tambah(){
+        session_start();
         if(isset($_SESSION["user"])) {
             if($_SESSION["user"]['role'] != "admin") {
                 header('Location: '.BASE_URL);
             }
-            if($this->model('Gamelists_model')->tambahGame($_POST) > 0){
-                header('Location: ' . BASE_URL . "/gamelists/index");
+            if($this->model('Users_model')->add($_POST) > 0){
+                header('Location: ' . BASE_URL . "/userlists/index");
                 exit;
             } else{
                 header('Location:' . BASE_URL . '/user/singleData');
@@ -34,16 +35,17 @@ class Userlists extends Controller{
         }
     }
 
-    public function delete($id){
+    public function delete($email){
+        session_start();
         if(isset($_SESSION["user"])) {
             if($_SESSION["user"]['role'] != "admin") {
                 header('Location: '.BASE_URL);
             }
-            if($this->model('Gamelists_model')->deleteGame($id) > 0){
-                header('Location: ' . BASE_URL . "/gamelists/index");
+            if($this->model('Users_model')->deleteUser($email) > 0){
+                header('Location: ' . BASE_URL . "/userlists/index");
                 exit;
             } else{
-                header('Location:' . BASE_URL . '/gamelists/index');
+                header('Location:' . BASE_URL . '/userlists/index');
             }
         } else {
             header('Location: '.BASE_URL);
@@ -52,23 +54,26 @@ class Userlists extends Controller{
     }    
 
     public function ubah(){
+        session_start();
         if(isset($_SESSION["user"])) {
             if($_SESSION["user"]['role'] != "admin") {
                 header('Location: '.BASE_URL);
             }
-            $this->model('Gamelists_model')->ubahDataGame($_POST);
-            header('Location: ' . BASE_URL . "/gamelists/index");
+            $this->model('Users_model')->update($_POST);
+            header('Location: ' . BASE_URL . "/userlists/index");
         } else {
             header('Location: '.BASE_URL);
         }
     }
 
     public function getUbah(){
+        session_start();
         if(isset($_SESSION["user"])) {
             if($_SESSION["user"]['role'] != "admin") {
                 header('Location: '.BASE_URL);
             }
-            echo json_encode($this->model("Gamelists_model")->getGameById_forEdit($_POST['id']));
+            echo json_encode($this->model("Users_model")->getUserById_forEdit($_POST['email']));
+            echo "Test";
         } else {
             header('Location: '.BASE_URL);
         }
