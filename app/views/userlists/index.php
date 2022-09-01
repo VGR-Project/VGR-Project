@@ -60,7 +60,7 @@
                                 <td><?=$row["Password"]?></td>
                                 <td><?=$row["role"]?></td>
                                 <td class="text-center"><button class="btn btn-success" onclick="window.location.href='<?= BASE_URL?>/game/<?=$row['email']?>'">Detail</button></td>
-                                <td class="tampilModalUbahUser text-center" data-id="<?= $row['email'];?>"><a data-toggle="modal" data-target="#formModalUser"><button class="btn btn-warning">Edit</button></td>
+                                <td class="tampilModalUbahUser text-center" data-id="<?= $row['id'];?>"><a data-toggle="modal" data-target="#formModalUser"><button class="btn btn-warning">Edit</button></td>
                                 <td class="text-center"><button onclick="window.location.href='<?=BASE_URL;?>/userlists/delete/<?=$row['id']?>'" class="btn btn-danger">Delete</button></td>
                             </tr>
                             <?php endforeach;?>
@@ -123,7 +123,7 @@
       </div>
       <div class="modal-body">
         <form action="<?= BASE_URL ?>/userlists/tambah" method="POST">
-        <input type="email" id="user_email" name="user_email"> 
+        <input type="text" id="id" name="id"> 
         <div class="form-group">
             <label for="game-title">Username</label>
             <input type="text" class="form-control" id="username" name="username">
@@ -136,12 +136,12 @@
 
         <div class="form-group">
             <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" name="password">
+            <input type="password" class="form-control" id="password" name="pass">
         </div>
 
         <div class="form-group">
             <label for="role">Role</label>
-            <input type="text" class="form-control" id="role" name="role">
+            <input type="text" class="form-control" id="role" name="roleLevel">
         </div>
 
       </div>

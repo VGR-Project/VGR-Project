@@ -32,17 +32,16 @@ $(function(){
         $('.modal-body form').attr('action','/vgr-project/public/userlists/ubah');
     
         const id = $(this).data('id');
-        console.log(id);
         $.ajax({
             url: '/vgr-project/public/userlists/getUbah',
             data: {id : id},
             method: 'post',
             dataType: 'json',
             success: function(data){
-                $("#user_email").val(data.id);
-                $('#username').val(data.username);
+                $("#id").val(data.id);
+                $('#username').val(data.Username);
                 $('#email').val(data.email);
-                $('#password').val(data.password);
+                $('#password').val(data.Password);
                 $('#role').val(data.role);
                 console.log(data);
             }

@@ -24,7 +24,7 @@ class Userlists extends Controller{
             if($_SESSION["user"]['role'] != "admin") {
                 header('Location: '.BASE_URL);
             }
-            if($this->model('Users_model')->add($_POST) > 0){
+            if($this->model('Users_model')->tambahUser($_POST) > 0){
                 header('Location: ' . BASE_URL . "/userlists/index");
                 exit;
             } else{
@@ -59,7 +59,7 @@ class Userlists extends Controller{
             if($_SESSION["user"]['role'] != "admin") {
                 header('Location: '.BASE_URL);
             }
-            $this->model('Users_model')->update($_POST);
+            $this->model('Users_model')->ubahDataUser($_POST);
             header('Location: ' . BASE_URL . "/userlists/index");
         } else {
             header('Location: '.BASE_URL);
@@ -72,10 +72,11 @@ class Userlists extends Controller{
             if($_SESSION["user"]['role'] != "admin") {
                 header('Location: '.BASE_URL);
             }
-            echo json_encode($this->model("Users_model")->getUserById_forEdit($_POST['email']));
-            echo "Test";
+            echo json_encode($this->model("Users_model")->getUserById_forEdit($_POST['id']));
+            // echo "Test";
         } else {
             header('Location: '.BASE_URL);
         }
+        // echo $_POST['id'];
     }
 }
