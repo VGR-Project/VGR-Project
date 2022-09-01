@@ -19,6 +19,7 @@ class Gamelists extends Controller{
     }
 
     public function tambah(){
+        session_start();
         if(isset($_SESSION["user"])) {
             if($_SESSION["user"]['role'] === "user") {
                 header('Location: '.BASE_URL);
@@ -36,6 +37,7 @@ class Gamelists extends Controller{
     }
 
     public function delete($id){
+        session_start();
         if(isset($_SESSION["user"])) {
             if($_SESSION["user"]['role'] === "user") {
                 header('Location: '.BASE_URL);
@@ -52,6 +54,7 @@ class Gamelists extends Controller{
     }    
 
     public function ubah(){
+        session_start();
         if(isset($_SESSION["user"])) {
             if($_SESSION["user"]['role'] === "user") {
                 header('Location: '.BASE_URL);
@@ -64,6 +67,7 @@ class Gamelists extends Controller{
     }
 
     public function getUbah(){
+        session_start();
         if(isset($_SESSION["user"])) {
             if($_SESSION["user"]['role'] === "user") {
                 header('Location: '.BASE_URL);
