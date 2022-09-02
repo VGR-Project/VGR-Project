@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Sep 01, 2022 at 02:36 PM
+-- Generation Time: Sep 02, 2022 at 08:01 AM
 -- Server version: 5.7.33
 -- PHP Version: 7.4.19
 
@@ -93,9 +93,7 @@ INSERT INTO `gamelists` (`id`, `desc_game`, `title`, `year`, `genres`, `release`
 (47, 'Uncharted: The Lost Legacy is a 2017 action-adventure game developed by Naughty Dog and published by Sony Interactive Entertainment. It is a standalone expansion to Uncharted 4: A Thief\'s End. Players control Chloe Frazer, who seeks the Tusk of Ganesh in the Western Ghats mountain ranges of India, with the help of ex-mercenary Nadine Ross, and prevent a ruthless warlord and his army of insurgents from igniting a civil war in the country. It is the first Uncharted game not to feature series protagonist Nathan Drake.  In India, treasure hunter Chloe Frazer (Claudia Black) searches for the legendary tusk of Ganesh, the son of Hindu god Shiva, who lost the tusk while defending his father\'s temple. Chloe\'s own father was killed by bandits while searching for the tusk. Chloe slips past insurgents and meets up with mercenary Nadine Ross (Laura Bailey). They sneak into the office of the insurgents\' leader, Asav (Usman Ally) a former acquaintance of Nadine, who wants to use the tusk to rally India into a civil war. Chloe and Nadine steal a map pointing toward the tusk within the ancient Hoysala Empire and a disc that acts as a key.  In India\'s Western Ghats, Chloe and Nadine follow the trail of several towers emblazoned with Hindu weapons: Ganesh\'s trident, Shiva\'s bow, and the axe of Parashurama, who used the axe to remove the tusk. The trail leads them to one of Hoysala\'s two capitals, Halebidu, whose last emperor left to be conquered by the Persians seemingly out of vanity. They realise the emperor left a false trail; the tusk is at the older capital, Belur. On the way there, they escape Asav and his men, but lose the disc. While spying on Asav\'s forces, Nadine sees her old enemy Samuel Drake (Troy Baker); she realizes he is Asav\'s expert. When she expresses her intention to kill Sam, primarily due to the events that transpired in Libertalia, Chloe reveals she was working with him before he was abducted. Feeling angry and betrayed, Nadine separates from Chloe, but they make amends.', 'Uncharted: The Lost Legacy', '2017', 'Action, Adventure, Mystery, Thriller', '2017-08-22', 'Shaun Escayg, Kurt Margenau'),
 (48, 'Halo: Combat Evolved is a 2001 first-person shooter game developed by Bungie and published by Microsoft Game Studios. It was released as a launch game for Microsoft Xbox video game console on November 15, 2001. The game was ported to Microsoft Windows and Mac OS X in 2003. It was later released as a downloadable Xbox Original for the Xbox 360. Halo is set in the twenty-sixth century, with the player assuming the role of the Master Chief, a cybernetically enhanced supersoldier. The Chief is accompanied by Cortana, an artificial intelligence. Players battle aliens as they attempt to uncover the secrets of the eponymous Halo, a ring-shaped artificial world.', 'Halo: Combat Evolved', '2001', 'Action, Adventure, Mystery, Sci-Fi', '2001-11-06', 'Jason Jones'),
 (49, 'Half-Life 2: Episode One is a 2006 first-person shooter game developed and published by Valve for Windows. It continues the story of Half-Life 2 (2004); as scientist Gordon Freeman, players must escape City 17 with Gordon\'s companion Alyx Vance. Like previous Half-Life games, Episode One combines shooting, puzzles and storytelling.  In City 17, Gordon Freeman and his ally Alyx Vance have destroyed the reactor at the heart of the Combine Citadel. As it explodes, the G-Man intervenes and extracts Gordon. Several Vortigaunts appear and rescue Alyx from the blast. The Vortigaunts appear before the G-Man and stand between him and Gordon. They teleport Gordon away from the scene, restricting the effect of G-Man\'s abilities on Gordon.  Alyx\'s pet robot Dog retrieves Gordon from rubble outside the Citadel, and Gordon reunites with Alyx. Alyx contacts her father Eli Vance and scientist Isaac Kleiner, who have escaped the city. Kleiner tells them the Citadel\'s core will soon explode, which will completely wipe out City 17. Alyx and Gordon re-enter the Citadel and temporarily stabilize the core.  Alyx discovers that Combine Elite soldiers are accelerating the destruction of the Citadel to send a \"transmission packet\" to the Combine\'s homeworld. She downloads a copy of the message, along with a transmission from Dr. Judith Mossman, in which she mentions a \"project\" she has located, before she is cut off by a Combine attack.  Alyx and Gordon board a train to escape the Citadel, but it derails. They proceed on foot in the city streets, fighting through the disorganized Combine forces and rampant alien infestations. They meet Barney Calhoun and a group of other survivors who are preparing to move to a train station to escape City 17. Alyx and Gordon lead and escort the survivors to the station, as the way there is constantly being swarmed and sabotaged by Combine forces.  Alyx and Gordon take a different train out of City 17, escaping just as the reactor detonates and the Combine\'s message is transmitted. Several rocket pods containing Combine Advisors launch from the Citadel as it detonates. The resulting shockwave derails the train.', 'Half-Life 2: Episode One', '2006', 'Action, Adventure, Sci-Fi, Thriller', '2006-05-31', 'Robin Walker'),
-(50, 'Grand Theft Auto III is a 2001 action-adventure game developed by DMA Design and published by Rockstar Games. It is the third main entry in the Grand Theft Auto series, following 1999\'s Grand Theft Auto 2, and the fifth instalment overall. Set within the fictional Liberty City (loosely based on New York City), the story follows Claude, a silent protagonist who, after being betrayed and left for dead by his girlfriend during a robbery, embarks on a quest for revenge that leads him to become entangled in a world of crime, drugs, gang warfare, and corruption. The game is played from a third-person perspective and its world is navigated on foot or by vehicle. Its open world design lets players freely roam Liberty City, consisting of three main areas.  Small-time criminal Claude is betrayed and shot by his girlfriend Catalina (voiced by Cynthia Farrell) during a bank heist outside Liberty City. Claude is arrested, but escapes during his transfer to prison when members of the Colombian Cartel ambush his transport to abduct another prisoner. During his escape, Claude befriends explosives expert and fellow convict 8-Ball (Guru), who shelters Claude and introduces him to the Leone Mafia family for work. Claude assists the Mafia with various operations, including winning a gang war against a local group of Triads, earning him the respect of Don Salvatore Leone (Frank Vincent). After learning that the Cartel are creating and selling a new street drug called SPANK to fund their expansion into Liberty City, Salvatore orders Claude to destroy their floating drug lab. Claude accomplishes this with 8-Ball\'s help.  Salvatore later instructs Claude to deal with a minor problem, but his trophy wife Maria (Debi Mazar), who took a liking to Claude, reveals it to be a set-up. Maria claims that she lied to Salvatore about having an affair with Claude to make him jealous, and now Salvatore wants to murder him. Claude escapes to Staunton Island with Maria and her friend Asuka Kasen (Lianna Pai). After assassinating Salvatore to cut ties with the Mafia, Claude begins working for the Yakuza, led by Asuka and her brother Kenji (Les J.N. Mau). During this time, he also provides assistance to corrupted police inspector Ray Machowski (Robert Loggia), whom he eventually helps flee the city, and influential businessman Donald Love (Kyle MacLachlan). Donald hires Claude to assassinate Kenji under the guise of a Cartel attack to start a gang war that will allow Donald to obtain construction sites for his businesses. After the job\'s success, Claude carries out another task for Donald that leads him to encounter Catalina, now the leader of the Cartel, at a construction site. However, Catalina escapes after betraying and shooting her partner, Miguel (Al Espinosa).  Asuka blames the Cartel for Kenji\'s death and seizes the construction site. The Yakuza capture the wounded Miguel and torture him for information on Cartel operations in the city, allowing Claude to strike against them and hinder the Cartel. Enraged, Catalina murders both Asuka and Miguel and kidnaps Maria, demanding $500,000 for her release. Claude meets with her to pay the ransom, but Catalina deceives him again and traps him. Claude escapes, rescues Maria, and destroys the helicopter Catalina attempts to flee in, killing her. As Claude and Maria leave the scene, the latter begins to complain about the kidnapping, but is silenced by a gunshot.', 'Grand Theft Auto III', '2001', 'Action, Crime, Drama', '2001-10-22', 'Rockstar'),
-(51, 'asdada', 'Test', '2016', 'Action, Adventure, Drama, Fantasy, Horror, Mystery', '2022-09-01', 'Testssss'),
-(52, 'asdadsa', 'asdads', 'asdads', 'dasdadsda', '2022-09-01', 'adasdasd');
+(50, 'Grand Theft Auto III is a 2001 action-adventure game developed by DMA Design and published by Rockstar Games. It is the third main entry in the Grand Theft Auto series, following 1999\'s Grand Theft Auto 2, and the fifth instalment overall. Set within the fictional Liberty City (loosely based on New York City), the story follows Claude, a silent protagonist who, after being betrayed and left for dead by his girlfriend during a robbery, embarks on a quest for revenge that leads him to become entangled in a world of crime, drugs, gang warfare, and corruption. The game is played from a third-person perspective and its world is navigated on foot or by vehicle. Its open world design lets players freely roam Liberty City, consisting of three main areas.  Small-time criminal Claude is betrayed and shot by his girlfriend Catalina (voiced by Cynthia Farrell) during a bank heist outside Liberty City. Claude is arrested, but escapes during his transfer to prison when members of the Colombian Cartel ambush his transport to abduct another prisoner. During his escape, Claude befriends explosives expert and fellow convict 8-Ball (Guru), who shelters Claude and introduces him to the Leone Mafia family for work. Claude assists the Mafia with various operations, including winning a gang war against a local group of Triads, earning him the respect of Don Salvatore Leone (Frank Vincent). After learning that the Cartel are creating and selling a new street drug called SPANK to fund their expansion into Liberty City, Salvatore orders Claude to destroy their floating drug lab. Claude accomplishes this with 8-Ball\'s help.  Salvatore later instructs Claude to deal with a minor problem, but his trophy wife Maria (Debi Mazar), who took a liking to Claude, reveals it to be a set-up. Maria claims that she lied to Salvatore about having an affair with Claude to make him jealous, and now Salvatore wants to murder him. Claude escapes to Staunton Island with Maria and her friend Asuka Kasen (Lianna Pai). After assassinating Salvatore to cut ties with the Mafia, Claude begins working for the Yakuza, led by Asuka and her brother Kenji (Les J.N. Mau). During this time, he also provides assistance to corrupted police inspector Ray Machowski (Robert Loggia), whom he eventually helps flee the city, and influential businessman Donald Love (Kyle MacLachlan). Donald hires Claude to assassinate Kenji under the guise of a Cartel attack to start a gang war that will allow Donald to obtain construction sites for his businesses. After the job\'s success, Claude carries out another task for Donald that leads him to encounter Catalina, now the leader of the Cartel, at a construction site. However, Catalina escapes after betraying and shooting her partner, Miguel (Al Espinosa).  Asuka blames the Cartel for Kenji\'s death and seizes the construction site. The Yakuza capture the wounded Miguel and torture him for information on Cartel operations in the city, allowing Claude to strike against them and hinder the Cartel. Enraged, Catalina murders both Asuka and Miguel and kidnaps Maria, demanding $500,000 for her release. Claude meets with her to pay the ransom, but Catalina deceives him again and traps him. Claude escapes, rescues Maria, and destroys the helicopter Catalina attempts to flee in, killing her. As Claude and Maria leave the scene, the latter begins to complain about the kidnapping, but is silenced by a gunshot.', 'Grand Theft Auto III', '2001', 'Action, Crime, Drama', '2001-10-22', 'Rockstar');
 
 -- --------------------------------------------------------
 
@@ -114,7 +112,7 @@ CREATE TABLE `rating` (
 --
 
 INSERT INTO `rating` (`id_game`, `rating`, `email_user`) VALUES
-(1, '9.80', 'Admin@gmail.com'),
+(1, '9.82', 'Admin@gmail.com'),
 (2, '9.70', 'Admin@gmail.com'),
 (3, '9.70', 'Admin@gmail.com'),
 (4, '9.60', 'Admin@gmail.com'),
@@ -165,7 +163,9 @@ INSERT INTO `rating` (`id_game`, `rating`, `email_user`) VALUES
 (49, '8.80', 'Admin@gmail.com'),
 (50, '8.70', 'Admin@gmail.com'),
 (19, '1.00', 'gnendraaw@email.com'),
-(4, '9.00', 'gnendraaw@email.com');
+(4, '9.00', 'gnendraaw@email.com'),
+(1, '9.82', 'vaisyagovinandas@gmail.com'),
+(1, '9.81', 'User@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -186,8 +186,9 @@ CREATE TABLE `review` (
 --
 
 INSERT INTO `review` (`id_game`, `review`, `date_review`, `email_user`, `id_review`) VALUES
-(1, 'Awsome...', '2022-08-28 15:07:48', 'Admin@gmail.com', 1),
-(1, 'Hi', '2022-08-30 12:22:07', 'vaisyagovinandas@gmail.com', 6);
+(1, 'Awsome', '2022-08-28 15:07:48', 'Admin@gmail.com', 1),
+(1, 'Hi...', '2022-08-30 12:22:07', 'vaisyagovinandas@gmail.com', 2),
+(1, 'Hello There', '2022-09-02 07:12:01', 'User@gmail.com', 3);
 
 -- --------------------------------------------------------
 
@@ -209,15 +210,11 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `Username`, `email`, `Password`, `role`) VALUES
 (1, 'Admin', 'Admin@gmail.com', 'Admin', 'admin'),
-(2, 'eka', 'eka@gmail.com', '123', 'user'),
-(3, 'gnendraaw', 'gnendraaw@email.com', 'password', 'user'),
-(4, 'NYX', 'isaputra901@smk.belajar.id', 'zxc', 'user'),
-(5, 'indra', 'mithniteneyyy@gmail.com', '1234', 'user'),
-(6, 'Nyoba_2Test', 'nyoba2@example.com', '123123123', 'user'),
-(7, 'NyobaEDITMASZZZZ', 'nyoba@example.com', '123', 'user'),
-(8, 'Test', 'test2@example.com', '123123', 'user'),
-(9, 'Test', 'test@example.com', 'asdasd', 'user'),
-(10, 'ex', 'vaisyagovinandas@gmail.com', '123', 'sub_admin');
+(2, 'eka', 'eka@gmail.com', '123', 'sub_admin'),
+(5, 'gnendraaw', 'gnendraaw@email.com', 'password', 'user'),
+(4, 'indra', 'mithniteneyyy@gmail.com', '1234', 'sub_admin'),
+(6, 'User', 'User@gmail.com', 'User', 'user'),
+(3, 'ex', 'vaisyagovinandas@gmail.com', '123', 'sub_admin');
 
 --
 -- Indexes for dumped tables
@@ -259,19 +256,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `gamelists`
 --
 ALTER TABLE `gamelists`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `review`
 --
 ALTER TABLE `review`
-  MODIFY `id_review` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_review` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables

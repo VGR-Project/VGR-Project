@@ -43,3 +43,6 @@ Terdapat fitur-fitur yang belum ditambahkan :
 # Solutions
 
 1. Menambahkan rating setelah game ditambahkan.
+
+# Github
+https://github.com/ekanata14/vgr-project
