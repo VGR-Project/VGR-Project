@@ -57,6 +57,13 @@ class Gamelists_model
     return $this->db->resultAll();
   }
 
+  public function checkGame($id) {
+    $this->db->query("SELECT * FROM {$this->table}
+      WHERE id = :id");
+      $this->db->bind("id", $id);
+      return $this->db->rowCount();
+  }
+
   public function getGameById($id) {
     $this->db->query("SELECT {$this->table}.*, CAST(AVG(rating.rating) AS DECIMAL(4, 2)) AS rating 
       FROM {$this->table}, rating 

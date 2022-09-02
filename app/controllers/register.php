@@ -4,6 +4,10 @@ class Register extends Controller {
     public function index()
     {
         session_start();
+        if(isset($_SESSION["user"])) {
+            header("location: ".BASE_URL);
+            exit;
+        }
         session_destroy();
         $data['title'] = 'Register';
         $this->view('template/header', $data);
@@ -25,11 +29,9 @@ class Register extends Controller {
             empty($data["repeat"])) {
             unset($_POST);
             header("location: ".BASE_URL."/register");
-            // isiin alert, lewat param
         } else if($data["password"] != $data["repeat"]) {
             unset($_POST);
             header("location: ".BASE_URL."/register");
-            // isiin alert, lewat param
         } else {
             if($this->model("Users_model")->checkDataByEmail($data) > 0) {
                 unset($_POST);

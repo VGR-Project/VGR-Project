@@ -73,10 +73,8 @@ class Userlists extends Controller{
                 header('Location: '.BASE_URL);
             }
             echo json_encode($this->model("Users_model")->getUserById_forEdit($_POST['id']));
-            // echo "Test";
         } else {
             header('Location: '.BASE_URL);
         }
-        // echo $_POST['id'];
     }
 }

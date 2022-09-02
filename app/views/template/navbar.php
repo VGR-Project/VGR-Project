@@ -85,7 +85,7 @@
         <?php if(!isset($data['name'])) { ?>
         <li class="nav-item dropdown no-arrow">
             <a class="nav-link dropdown-toggle" href="<?=BASE_URL;?>/login">
-                <img class="img-profile rounded-circle" src="<?=BASE_URL;?>/public/img/undraw_profile.svg">
+                <img class="img-profile rounded-circle" src="<?=BASE_URL;?>/public/img/lilgru.jpg">
             </a>
         </li>
         <?php } else { ?>
@@ -103,7 +103,7 @@
                     Profile
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="<?=BASE_URL;?>/login">
+                <a class="dropdown-item" href="<?=BASE_URL;?>/logout">
                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                     Logout
                 </a>

@@ -18,12 +18,13 @@ class Dash extends Controller {
   }
 
   public function search() {
+    if(!isset($_POST["search"])) {
+      header("location: ".BASE_URL);
+    }
     session_start();
     if(isset($_SESSION["user"])) {
       $data['name'] = $_SESSION['user']['username'];
-    } else if (!isset($_POST["search"])) {
-      header("location: ".BASE_URL);
-    } else {}
+    }
     $data["title"] = "Dashboard";
     $data["search"] = $this->model("Gamelists_model")->search($_POST);
     $this->view("template/header", $data);
@@ -31,7 +32,10 @@ class Dash extends Controller {
     $this->view("template/footer");
   }
 
-  public function genre($genre) {
+  public function genre($genre = NULL) {
+    if($genre === NULL) {
+      header("location: ".BASE_URL);
+    }
     session_start();
     if(isset($_SESSION["user"])) {
       $data['name'] = $_SESSION['user']['username'];

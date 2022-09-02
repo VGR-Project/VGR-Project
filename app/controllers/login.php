@@ -3,6 +3,10 @@ class Login extends Controller {
     public function index()
     {
         session_start();
+        if(isset($_SESSION["user"])) {
+            header("location: ".BASE_URL);
+            exit;
+        }
         session_destroy();
         $data['title'] = 'Login';
         $this->view('template/header', $data);
