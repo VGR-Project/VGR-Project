@@ -123,7 +123,7 @@
       </div>
       <div class="modal-body">
         <form action="<?= BASE_URL ?>/userlists/tambah" method="POST">
-        <input type="text" id="id" name="id"> 
+        <input type="hidden" id="id" name="id" > 
         <div class="form-group">
             <label for="game-title">Username</label>
             <input type="text" class="form-control" id="username" name="username">
