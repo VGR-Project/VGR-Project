@@ -325,7 +325,7 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Most Favorites</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Most Rated</h6>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body aside">
@@ -389,7 +389,7 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">New Update</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">New Added</h6>
                                 </div>
                                 <!-- Card Body -->
                                 <div class="card-body aside">

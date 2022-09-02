@@ -16,7 +16,7 @@ class Users_model
     }
 
     public function add($data) {
-        $this->db->query("INSERT INTO {$this->table} VALUES ( :uname, :email, :pass, :role)");
+        $this->db->query("INSERT INTO {$this->table} VALUES (NULL, :uname, :email, :pass, :role)");
         $this->db->bind('uname', $data['username']);
         $this->db->bind('email', $data['email']);
         $this->db->bind('pass', $data['password']);

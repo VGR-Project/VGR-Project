@@ -26,7 +26,7 @@ class Dash extends Controller {
     if(isset($_SESSION["user"])) {
       $data['name'] = $_SESSION['user']['username'];
     }
-    $data["title"] = "Dashboard";
+    $data["title"] = "Search - ".$_POST["search"];
     $data["search"] = $this->model("Gamelists_model")->search($_POST);
     $this->view("template/header", $data);
     $this->view("dash/search", $data);
@@ -41,7 +41,7 @@ class Dash extends Controller {
     if(isset($_SESSION["user"])) {
       $data['name'] = $_SESSION['user']['username'];
     }
-    $data["title"] = $genre;
+    $data["title"] = "Genre - ".$genre;
     $data["genre"] = $this->model("Gamelists_model")->getGameByGenre($genre);
     $this->view("template/header", $data);
     $this->view("dash/genre", $data);
