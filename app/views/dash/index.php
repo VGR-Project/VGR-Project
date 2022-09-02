@@ -331,17 +331,17 @@
                                 <div class="card-body aside">
                                     <div class="d-flex flex-column h-100 overflow-auto scrollbar-none">
                                         <?php
-                                        foreach($data["new"] as $new) :?>
-                                                <div class="card bg-danger h-50 text-white shadow cursor-pointer game-box mb-3" id="<?=$new["id"]?>">
+                                        foreach($data["fav1"] as $fav) :?>
+                                                <div class="card bg-danger h-50 text-white shadow cursor-pointer game-box mb-3" id="<?=$fav["id"]?>">
                                                     <div class="card-body w-100 d-flex">
                                                         <div class="w-50 pr-3 h-100 overflow-hidden d-flex justify-content-center align-items-center">
-                                                            <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $new["title"])?>.jpg" alt="" class="w-100">
+                                                            <img src="<?=BASE_URL;?>/public/img/game-image/<?=str_replace(":", "", $fav["title"])?>.jpg" alt="" class="w-100">
                                                         </div>
                                                         <div class="w-50 h-100 overflow-auto scrollbar-none">
-                                                            <h4 class="m-0 font-weight-bold"><?=$new["title"]?></h4>
-                                                            <h5><?=$new["directors"]?></h5>
-                                                            <h6><?=$new["rating"]?></h6>
-                                                            <div class="text-white-50 small"><?=$new["genres"]?></div>
+                                                            <h4 class="m-0 font-weight-bold"><?=$fav["title"]?></h4>
+                                                            <h5><?=$fav["directors"]?></h5>
+                                                            <h6><?=$fav["rating"]?></h6>
+                                                            <div class="text-white-50 small"><?=$fav["genres"]?></div>
                                                         </div>
                                                     </div>
                                                 </div>

@@ -15,23 +15,25 @@ class Gamelists_model
     return $this->db->resultAll();
   }
 
-  public function getNew() {
+  public function getNew($limit) {
     $this->db->query("SELECT {$this->table}.*, CAST(AVG(rating.rating) AS DECIMAL(4, 2)) AS rating 
       FROM {$this->table}, rating
       WHERE {$this->table}.id = rating.id_game
       GROUP BY {$this->table}.id 
       ORDER BY `release` DESC
-      LIMIT 5");
+      LIMIT :mit");
+    $this->db->bind("mit", $limit);
     return $this->db->resultAll();
   }
 
-  public function getOld() {
+  public function getOld($limit) {
     $this->db->query("SELECT {$this->table}.*, CAST(AVG(rating.rating) AS DECIMAL(4, 2)) AS rating 
       FROM {$this->table}, rating
       WHERE {$this->table}.id = rating.id_game
       GROUP BY {$this->table}.id 
       ORDER BY `release` ASC
-      LIMIT 5");
+      LIMIT :mit");
+    $this->db->bind("mit", $limit);
     return $this->db->resultAll();
   }
 
@@ -41,6 +43,17 @@ class Gamelists_model
       WHERE {$this->table}.id = rating.id_game
       GROUP BY {$this->table}.id 
       ORDER BY rating DESC
+      LIMIT :mit");
+    $this->db->bind("mit", $limit);
+    return $this->db->resultAll();
+  }
+
+  public function getFavorites($limit) {
+    $this->db->query("SELECT {$this->table}.*, CAST(AVG(rating.rating) AS DECIMAL(4, 2)) AS rating
+      FROM {$this->table}, rating
+      WHERE {$this->table}.id = rating.id_game
+      GROUP BY {$this->table}.id 
+      ORDER BY COUNT(rating.rating) ASC
       LIMIT :mit");
     $this->db->bind("mit", $limit);
     return $this->db->resultAll();
