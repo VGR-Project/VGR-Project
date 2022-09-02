@@ -53,7 +53,7 @@ class Gamelists_model
       FROM {$this->table}, rating
       WHERE {$this->table}.id = rating.id_game
       GROUP BY {$this->table}.id 
-      ORDER BY COUNT(rating.rating) ASC
+      ORDER BY COUNT(rating.rating) DESC
       LIMIT :mit");
     $this->db->bind("mit", $limit);
     return $this->db->resultAll();
