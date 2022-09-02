@@ -26,7 +26,9 @@ class Game extends Controller {
     if ($id === NULL) {
       header("location: ".BASE_URL);
     } else if($_POST['rating'] != "" || $_POST['rating'] != NULL) {
-      $this->model("Rating_model")->inputRating($id, $_POST['rating'], $_SESSION['user']['email']);
+      if(isset($_SESSION["user"])) {
+        $this->model("Rating_model")->inputRating($id, $_POST['rating'], $_SESSION['user']['email']);
+      }
     }
     header("location: ".BASE_URL."/game/index/".$id);
   }
@@ -36,7 +38,9 @@ class Game extends Controller {
     if ($id === NULL) {
       header("location: ".BASE_URL);
     } else if ($_POST['rating'] != "" || $_POST['rating'] != NULL) {
-      $this->model("Rating_model")->updateRating($id, $_POST['rating'], $_SESSION['user']['email']);
+      if(isset($_SESSION["user"])) {
+        $this->model("Rating_model")->updateRating($id, $_POST['rating'], $_SESSION['user']['email']);
+      }
     }
     header("location: ".BASE_URL."/game/index/".$id);
   }
@@ -46,7 +50,9 @@ class Game extends Controller {
     if ($id === NULL) {
       header("location: ".BASE_URL);
     } else if ($_POST['review'] != "" || $_POST['review'] != NULL) {
-      $this->model("Review_model")->inputReview($id, $_POST['review'], date("Y-m-d h:i:s"), $_SESSION['user']['email']);
+      if(isset($_SESSION["user"])) {
+        $this->model("Review_model")->inputReview($id, $_POST['review'], date("Y-m-d h:i:s"), $_SESSION['user']['email']);
+      }
     }
     header("location: ".BASE_URL."/game/index/".$id);
   }
@@ -56,7 +62,9 @@ class Game extends Controller {
     if ($id === NULL || $idGame === NULL) {
       header("location: ".BASE_URL);
     }
-    $this->model("Review_model")->deleteReview($id);
+    if(isset($_SESSION["user"])) {
+      $this->model("Review_model")->deleteReview($id);
+    }
     header("location: ".BASE_URL."/game/index/".$idGame);
   }
 
@@ -65,7 +73,9 @@ class Game extends Controller {
     if ($id === NULL || $idGame === NULL) {
       header("location: ".BASE_URL);
     }
-    $this->model("Review_model")->updateReview($id, $_POST['review']);
+    if(isset($_SESSION["user"])) {
+      $this->model("Review_model")->updateReview($id, $_POST['review']);
+    }
     header("location: ".BASE_URL."/game/index/".$idGame);
   }
 }
